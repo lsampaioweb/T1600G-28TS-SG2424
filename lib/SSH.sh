@@ -28,7 +28,6 @@ appendSSHConfigInfo () {
   file=$1
   textToSearch="# Specific Settings for $DEVICE_IP"
 
-  # Check if the file already contains the specific settings for the switch.
   if ( ! textExistsInFile "$file" "$textToSearch"); then
     logDebug "Appending Specific Settings for: $DEVICE_IP"
 

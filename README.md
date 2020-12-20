@@ -1,14 +1,20 @@
 # T1600G-28TS-SG2424
 Scripts to setup the Switch Tplink SFP T1600G-28TS SG2424.
 
-Options you can execute:
- 1 - Exit.
- 2 - Setup Switch from Zero to Hero!
- 3 - Prepare Host Machine.
+#### Options you can execute:
+1. Exit.
+2. Setup Switch from Zero to Hero!
+3. Prepare Host Machine.
+4. Enable SSH.
 
 
-01 - Create a strong password for the admin user and store it in the MacOSX Keychain.
-  security add-generic-password -U -a $USER -s "tplink_user_admin" -j "Password for the admin user in the TP-Link Switch." -w $(openssl rand -base64 32 | colrm 33)
+#### Credentials:
+1. Create a strong password for the admin user and store it in the **MacOSX** Keychain.
+```bash
+    security add-generic-password -U -a $USER -s "tplink_user_admin" -j "Password for the admin user in the TP-Link Switch." -w $(openssl rand -base64 32 | colrm 33)
+```    
 
-02 - Retrieve the admin's password.
-  security find-generic-password -a $USER -s "tplink_user_admin" -w | pbcopy
+2. Retrieve the admin's password.
+```bash
+    security find-generic-password -a $USER -s "tplink_user_admin" -w | pbcopy
+```
