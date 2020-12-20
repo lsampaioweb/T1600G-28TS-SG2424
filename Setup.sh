@@ -6,6 +6,12 @@
 # Usage:        ./Setup.sh
 
 # Dependencies
+. lib/Log.sh
+. option/RunAllSetupScripts.sh
+
+# Variables
+chosenOption=-1
+amountOfOptions=2
 
 # Methods
 sendBreakLine () {
@@ -17,7 +23,7 @@ runChosenOption () {
   case $1 in
    #1) is the option to exit the application. There is nothing to do here.
     2)
-       ;;
+      runAllSetupScripts ;;
   esac
   sendBreakLine
 }
@@ -25,6 +31,7 @@ runChosenOption () {
 displayMenu() {
   echo "Type the number of the option you want to execute. [1-$1]"
   echo " 1 - Exit."
+  echo " 2 - Setup Switch from Zero to Hero!"
 }
 
 userHasChosenAValidOption() {
@@ -50,8 +57,6 @@ userWantsToExit() {
   [ $1 -eq 1 ] && return 0 || return 1
 }
 
-chosenOption=-1
-amountOfOptions=1
 until userWantsToExit $chosenOption
 do
   getChosenOption $amountOfOptions
