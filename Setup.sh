@@ -7,11 +7,12 @@
 
 # Dependencies
 . lib/Log.sh
+. option/PrepareHostMachine.sh
 . option/RunAllSetupScripts.sh
 
 # Variables
 chosenOption=-1
-amountOfOptions=2
+amountOfOptions=3
 
 # Methods
 sendBreakLine () {
@@ -24,6 +25,8 @@ runChosenOption () {
    #1) is the option to exit the application. There is nothing to do here.
     2)
       runAllSetupScripts ;;
+    3)
+      prepareHostMachine ;;
   esac
   sendBreakLine
 }
@@ -32,6 +35,7 @@ displayMenu() {
   echo "Type the number of the option you want to execute. [1-$1]"
   echo " 1 - Exit."
   echo " 2 - Setup Switch from Zero to Hero!"
+  echo " 3 - Prepare Host Machine."
 }
 
 userHasChosenAValidOption() {
