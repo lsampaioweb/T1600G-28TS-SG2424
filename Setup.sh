@@ -6,13 +6,26 @@
 # Usage:        ./Setup.sh
 
 # Dependencies
+. Constants.sh
+. command/Config.sh
+. command/Enable.sh
+. command/Management.sh
+. lib/Credential.sh
+. lib/File.sh
+. lib/FileMode.sh
+. lib/IP.sh
 . lib/Log.sh
+. lib/PackageManager.sh
+. lib/SSH.sh
+. lib/Telnet.sh
+. lib/TFTP.sh
+. option/EnableSSH.sh
 . option/PrepareHostMachine.sh
 . option/RunAllSetupScripts.sh
 
 # Variables
 chosenOption=-1
-amountOfOptions=3
+amountOfOptions=4
 
 # Methods
 sendBreakLine () {
@@ -27,6 +40,8 @@ runChosenOption () {
       runAllSetupScripts ;;
     3)
       prepareHostMachine ;;
+    4)
+      enableSSH ;;
   esac
   sendBreakLine
 }
@@ -36,6 +51,7 @@ displayMenu() {
   echo " 1 - Exit."
   echo " 2 - Setup Switch from Zero to Hero!"
   echo " 3 - Prepare Host Machine."
+  echo " 4 - Enable SSH."
 }
 
 userHasChosenAValidOption() {

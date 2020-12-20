@@ -4,9 +4,6 @@
 # Author:       Luciano Sampaio Martins de Souza
 # Date:         20-Dec-2020
 
-# Dependencies
-. lib/PackageManager.sh
-
 prepareHostMachine () {
   logInfo "Preparing Host Machine."
 

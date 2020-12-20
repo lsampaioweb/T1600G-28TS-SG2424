@@ -5,3 +5,10 @@ Options you can execute:
  1 - Exit.
  2 - Setup Switch from Zero to Hero!
  3 - Prepare Host Machine.
+
+
+01 - Create a strong password for the admin user and store it in the MacOSX Keychain.
+  security add-generic-password -U -a $USER -s "tplink_user_admin" -j "Password for the admin user in the TP-Link Switch." -w $(openssl rand -base64 32 | colrm 33)
+
+02 - Retrieve the admin's password.
+  security find-generic-password -a $USER -s "tplink_user_admin" -w | pbcopy

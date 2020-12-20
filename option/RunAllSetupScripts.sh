@@ -9,6 +9,7 @@ runAllSetupScripts () {
   logInfo "Running All Setup Scripts."
 
   prepareHostMachine
+  enableSSH
 
   logInfo "Finished."
 }
