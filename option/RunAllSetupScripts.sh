@@ -12,6 +12,7 @@ runAllSetupScripts () {
   enableSSH
   upgradeFirmware
   enablePasswordEncryption
+  createBotUser
 
   logInfo "Finished."
 }

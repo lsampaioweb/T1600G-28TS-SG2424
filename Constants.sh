@@ -8,6 +8,10 @@ DEBUG=true
 DEVICE_IP="192.168.0.2"
 USER_ADMIN=admin
 USER_ADMIN_KEYCHAIN=tplink_user_admin
+USER_BOT=tplink_user_bot
+USER_BOT_PRIVILEGE=admin
+PASSWORD_LENGTH=31
+
 TFTP_DIRECTORY="/private/tftpboot/"
 
 SSH_VERSION="v2"

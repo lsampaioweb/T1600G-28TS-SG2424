@@ -16,6 +16,15 @@ sendEnablePasswordEncryption() {
   sendCommand "service password-encryption"
 }
 
+sendDeleteUser() {
+  sendCommand "no user name $1"
+}
+
+sendCreateUser() {
+  sendDeleteUser "$1" # Delete the user if he/she already exists.
+  sendCommand "user name $1 privilege $2 secret 0 $3"
+}
+
 sendEnd() {
   sendCommand "end"
 }

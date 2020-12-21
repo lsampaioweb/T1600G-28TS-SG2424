@@ -19,6 +19,7 @@
 . lib/SSH.sh
 . lib/Telnet.sh
 . lib/TFTP.sh
+. option/CreateBotUser.sh
 . option/EnablePasswordEncryption.sh
 . option/EnableSSH.sh
 . option/PrepareHostMachine.sh
@@ -27,7 +28,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=6
+amountOfOptions=7
 
 # Methods
 sendBreakLine () {
@@ -48,6 +49,8 @@ runChosenOption () {
       upgradeFirmware ;;
     6)
       enablePasswordEncryption ;;
+    7)
+      createBotUser ;;
   esac
   sendBreakLine
 }
@@ -60,6 +63,7 @@ displayMenu() {
   echo " 4 - Enable SSH."
   echo " 5 - Upgrade Firmware."
   echo " 6 - Enable Password Encryption."
+  echo " 7 - Create Bot User."
 }
 
 userHasChosenAValidOption() {
