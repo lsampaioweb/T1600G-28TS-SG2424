@@ -22,10 +22,11 @@
 . option/EnableSSH.sh
 . option/PrepareHostMachine.sh
 . option/RunAllSetupScripts.sh
+. option/UpgradeFirmware.sh
 
 # Variables
 chosenOption=-1
-amountOfOptions=4
+amountOfOptions=5
 
 # Methods
 sendBreakLine () {
@@ -42,6 +43,8 @@ runChosenOption () {
       prepareHostMachine ;;
     4)
       enableSSH ;;
+    5)
+      upgradeFirmware ;;
   esac
   sendBreakLine
 }
@@ -52,6 +55,7 @@ displayMenu() {
   echo " 2 - Setup Switch from Zero to Hero!"
   echo " 3 - Prepare Host Machine."
   echo " 4 - Enable SSH."
+  echo " 5 - Upgrade Firmware."
 }
 
 userHasChosenAValidOption() {

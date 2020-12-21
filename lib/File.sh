@@ -24,3 +24,9 @@ textExistsInFile () {
 
   return 1 # False
 }
+
+deleteFile () {
+  if ( fileExists "$1" ); then
+    rm "$1"
+  fi
+}

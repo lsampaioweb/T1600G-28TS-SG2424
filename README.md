@@ -1,12 +1,12 @@
 # T1600G-28TS-SG2424
-Scripts to setup the Switch Tplink SFP T1600G-28TS SG2424.
+Scripts to Setup the Switch Tplink SFP T1600G-28TS SG2424.
 
 #### Options you can execute:
 1. Exit.
 2. Setup Switch from Zero to Hero!
 3. Prepare Host Machine.
 4. Enable SSH.
-
+5. Upgrade Firmware.
 
 #### Credentials:
 1. Create a strong password for the admin user and store it in the **MacOSX** Keychain.

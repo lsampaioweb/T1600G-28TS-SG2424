@@ -10,6 +10,7 @@ runAllSetupScripts () {
 
   prepareHostMachine
   enableSSH
+  upgradeFirmware
 
   logInfo "Finished."
 }

@@ -29,3 +29,9 @@ copyFileToTFTPFolder () {
 
   sudo cp -p "$1" "$TFTP_DIRECTORY"
 }
+
+deleteFileFromTFTPFolder () {
+  logDebug "Deleting file: ${TFTP_DIRECTORY}${1}"
+
+  sudo rm "${TFTP_DIRECTORY}${1}"
+}
