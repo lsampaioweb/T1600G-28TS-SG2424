@@ -12,6 +12,10 @@ sendDownloadSSHPublicKey() {
   sendCommand "ip ssh download $SSH_VERSION $SSH_PUBLIC_KEY_FULLNAME ip-address $1"
 }
 
+sendEnablePasswordEncryption() {
+  sendCommand "service password-encryption"
+}
+
 sendEnd() {
   sendCommand "end"
 }

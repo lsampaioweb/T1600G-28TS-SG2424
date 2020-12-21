@@ -19,6 +19,7 @@
 . lib/SSH.sh
 . lib/Telnet.sh
 . lib/TFTP.sh
+. option/EnablePasswordEncryption.sh
 . option/EnableSSH.sh
 . option/PrepareHostMachine.sh
 . option/RunAllSetupScripts.sh
@@ -26,7 +27,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=5
+amountOfOptions=6
 
 # Methods
 sendBreakLine () {
@@ -45,6 +46,8 @@ runChosenOption () {
       enableSSH ;;
     5)
       upgradeFirmware ;;
+    6)
+      enablePasswordEncryption ;;
   esac
   sendBreakLine
 }
@@ -56,6 +59,7 @@ displayMenu() {
   echo " 3 - Prepare Host Machine."
   echo " 4 - Enable SSH."
   echo " 5 - Upgrade Firmware."
+  echo " 6 - Enable Password Encryption."
 }
 
 userHasChosenAValidOption() {

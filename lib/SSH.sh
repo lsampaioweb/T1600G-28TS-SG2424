@@ -4,6 +4,10 @@
 # Author:       Luciano Sampaio Martins de Souza
 # Date:         20-Dec-2020
 
+runSSH () {
+  ( xargs -I {} ) | ssh -T "$1" #> out.txt
+}
+
 createSSHKeyPair () {
   logDebug "Creating SSH Key Pair: $1"
 

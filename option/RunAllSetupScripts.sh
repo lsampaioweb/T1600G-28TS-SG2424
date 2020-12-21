@@ -11,6 +11,7 @@ runAllSetupScripts () {
   prepareHostMachine
   enableSSH
   upgradeFirmware
+  enablePasswordEncryption
 
   logInfo "Finished."
 }
