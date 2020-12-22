@@ -13,6 +13,7 @@
 . lib/Credential.sh
 . lib/File.sh
 . lib/FileMode.sh
+. lib/Https.sh
 . lib/IP.sh
 . lib/Log.sh
 . lib/PackageManager.sh
@@ -20,6 +21,7 @@
 . lib/Telnet.sh
 . lib/TFTP.sh
 . option/CreateBotUser.sh
+. option/EnableHTTPS.sh
 . option/EnablePasswordEncryption.sh
 . option/EnableRemoteLogging.sh
 . option/EnableSSH.sh
@@ -30,7 +32,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=9
+amountOfOptions=10
 
 # Methods
 sendBreakLine () {
@@ -57,6 +59,8 @@ runChosenOption () {
       setSystemTimeUsingNTPServer ;;
     9)
       enableRemoteLogging ;;
+    10)
+      enableHTTPS ;;
   esac
   sendBreakLine
 }
@@ -72,6 +76,7 @@ displayMenu() {
   echo " 7 - Create Bot User."
   echo " 8 - Set System Time from NTP Server."
   echo " 9 - Enable Remote Logging."
+  echo "10 - Enable HTTPS."
 }
 
 userHasChosenAValidOption() {

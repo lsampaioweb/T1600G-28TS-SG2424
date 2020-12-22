@@ -15,6 +15,7 @@ runAllSetupScripts () {
   createBotUser
   setSystemTimeUsingNTPServer
   enableRemoteLogging
+  enableHTTPS
 
   logInfo "Finished."
 }

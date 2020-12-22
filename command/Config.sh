@@ -29,6 +29,18 @@ sendEnableRemoteLogging() {
   sendCommand "logging host index $1 $2 $3"
 }
 
+sendEnableHTTPS() {
+  sendCommand "ip http secure-server"
+}
+
+sendDownloadHTTPSCertificate() {
+  sendCommand "ip http secure-server download certificate $HTTPS_CERTIFICATE ip-address $1"
+}
+
+sendDownloadHTTPSKey() {
+  sendCommand "ip http secure-server download key $HTTPS_CERTIFICATE_PEM ip-address $1"
+}
+
 sendEnd() {
   sendCommand "end"
 }

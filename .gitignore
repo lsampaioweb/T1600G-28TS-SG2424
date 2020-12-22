@@ -4,5 +4,10 @@
 .AppleDouble
 .LSOverride
 
+### HTTPS Certificates ###
+certificate/*.crt
+certificate/*.key
+certificate/*.pem
+
 ### Firmware ###
 firmware/*.zip
