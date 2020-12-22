@@ -11,6 +11,8 @@ USER_ADMIN_KEYCHAIN=tplink_user_admin
 USER_BOT=tplink_user_bot
 USER_BOT_PRIVILEGE=admin
 PASSWORD_LENGTH=31
+IP_REMOTE_LOGGING_SERVER="192.168.0.3"
+LOG_LEVEL=6 #Info
 
 TFTP_DIRECTORY="/private/tftpboot/"
 

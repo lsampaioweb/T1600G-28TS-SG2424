@@ -14,6 +14,7 @@ runAllSetupScripts () {
   enablePasswordEncryption
   createBotUser
   setSystemTimeUsingNTPServer
+  enableRemoteLogging
 
   logInfo "Finished."
 }

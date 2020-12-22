@@ -21,6 +21,7 @@
 . lib/TFTP.sh
 . option/CreateBotUser.sh
 . option/EnablePasswordEncryption.sh
+. option/EnableRemoteLogging.sh
 . option/EnableSSH.sh
 . option/PrepareHostMachine.sh
 . option/RunAllSetupScripts.sh
@@ -29,7 +30,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=8
+amountOfOptions=9
 
 # Methods
 sendBreakLine () {
@@ -54,6 +55,8 @@ runChosenOption () {
       createBotUser ;;
     8)
       setSystemTimeUsingNTPServer ;;
+    9)
+      enableRemoteLogging ;;
   esac
   sendBreakLine
 }
@@ -68,6 +71,7 @@ displayMenu() {
   echo " 6 - Enable Password Encryption."
   echo " 7 - Create Bot User."
   echo " 8 - Set System Time from NTP Server."
+  echo " 9 - Enable Remote Logging."
 }
 
 userHasChosenAValidOption() {

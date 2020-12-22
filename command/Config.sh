@@ -25,6 +25,10 @@ sendCreateUser() {
   sendCommand "user name $1 privilege $2 secret 0 $3"
 }
 
+sendEnableRemoteLogging() {
+  sendCommand "logging host index $1 $2 $3"
+}
+
 sendEnd() {
   sendCommand "end"
 }
