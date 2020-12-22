@@ -24,11 +24,12 @@
 . option/EnableSSH.sh
 . option/PrepareHostMachine.sh
 . option/RunAllSetupScripts.sh
+. option/SystemTimeUsingNTPServer.sh
 . option/UpgradeFirmware.sh
 
 # Variables
 chosenOption=-1
-amountOfOptions=7
+amountOfOptions=8
 
 # Methods
 sendBreakLine () {
@@ -51,6 +52,8 @@ runChosenOption () {
       enablePasswordEncryption ;;
     7)
       createBotUser ;;
+    8)
+      setSystemTimeUsingNTPServer ;;
   esac
   sendBreakLine
 }
@@ -64,6 +67,7 @@ displayMenu() {
   echo " 5 - Upgrade Firmware."
   echo " 6 - Enable Password Encryption."
   echo " 7 - Create Bot User."
+  echo " 8 - Set System Time from NTP Server."
 }
 
 userHasChosenAValidOption() {

@@ -13,6 +13,7 @@ runAllSetupScripts () {
   upgradeFirmware
   enablePasswordEncryption
   createBotUser
+  setSystemTimeUsingNTPServer
 
   logInfo "Finished."
 }

@@ -9,6 +9,7 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS SG2424.
 5. Upgrade Firmware.
 6. Enable Password Encryption.
 7. Create Bot User.
+8. Set System Time from NTP Server.
 
 #### Credentials:
 1. Create a strong password for the admin user and store it in the **MacOSX** Keychain.
