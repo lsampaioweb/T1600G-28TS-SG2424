@@ -10,5 +10,8 @@ prepareHostMachine () {
   # Install telnet on the host machine because Macs do not come with telnet installed by default.
   installPackage "telnet"
 
+  createDirectory "backup"
+  createDirectory "firmware"
+
   logInfo "Finished."
 }
