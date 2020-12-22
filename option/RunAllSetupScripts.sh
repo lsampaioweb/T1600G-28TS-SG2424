@@ -16,6 +16,7 @@ runAllSetupScripts () {
   setSystemTimeUsingNTPServer
   enableRemoteLogging
   enableHTTPS
+  disableHTTP
 
   logInfo "Finished."
 }

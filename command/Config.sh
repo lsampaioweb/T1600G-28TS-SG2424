@@ -41,6 +41,10 @@ sendDownloadHTTPSKey() {
   sendCommand "ip http secure-server download key $HTTPS_CERTIFICATE_PEM ip-address $1"
 }
 
+sendDisableHTTP() {
+  sendCommand "no ip http server"
+}
+
 sendEnd() {
   sendCommand "end"
 }

@@ -21,6 +21,7 @@
 . lib/Telnet.sh
 . lib/TFTP.sh
 . option/CreateBotUser.sh
+. option/DisableHTTP.sh
 . option/EnableHTTPS.sh
 . option/EnablePasswordEncryption.sh
 . option/EnableRemoteLogging.sh
@@ -32,7 +33,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=10
+amountOfOptions=11
 
 # Methods
 sendBreakLine () {
@@ -61,6 +62,8 @@ runChosenOption () {
       enableRemoteLogging ;;
     10)
       enableHTTPS ;;
+    11)
+      disableHTTP ;;
   esac
   sendBreakLine
 }
@@ -77,6 +80,7 @@ displayMenu() {
   echo " 8 - Set System Time from NTP Server."
   echo " 9 - Enable Remote Logging."
   echo "10 - Enable HTTPS."
+  echo "11 - Disable HTTP."
 }
 
 userHasChosenAValidOption() {
