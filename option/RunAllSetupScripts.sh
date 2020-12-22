@@ -17,6 +17,7 @@ runAllSetupScripts () {
   enableRemoteLogging
   enableHTTPS
   disableHTTP
+  setJumboSize
 
   logInfo "Finished."
 }

@@ -13,6 +13,7 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS SG2424.
 9. Enable Remote Logging.
 10. Enable HTTPS.
 11. Disable HTTP.
+12. Set Jumbo Size.
 
 #### Credentials:
 1. Create a strong password for the admin user and store it in the **MacOSX** Keychain.

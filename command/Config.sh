@@ -45,6 +45,10 @@ sendDisableHTTP() {
   sendCommand "no ip http server"
 }
 
+sendSetJumboSize() {
+  sendCommand "jumbo-size $SIZE_OF_JUMBO_FRAME"
+}
+
 sendEnd() {
   sendCommand "end"
 }

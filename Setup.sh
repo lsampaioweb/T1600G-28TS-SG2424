@@ -11,6 +11,7 @@
 . command/Enable.sh
 . command/Management.sh
 . lib/Credential.sh
+. lib/Directory.sh
 . lib/File.sh
 . lib/FileMode.sh
 . lib/Https.sh
@@ -26,6 +27,7 @@
 . option/EnablePasswordEncryption.sh
 . option/EnableRemoteLogging.sh
 . option/EnableSSH.sh
+. option/JumboSize.sh
 . option/PrepareHostMachine.sh
 . option/RunAllSetupScripts.sh
 . option/SystemTimeUsingNTPServer.sh
@@ -33,7 +35,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=11
+amountOfOptions=12
 
 # Methods
 sendBreakLine () {
@@ -64,6 +66,8 @@ runChosenOption () {
       enableHTTPS ;;
     11)
       disableHTTP ;;
+    12)
+      setJumboSize ;;
   esac
   sendBreakLine
 }
@@ -81,6 +85,7 @@ displayMenu() {
   echo " 9 - Enable Remote Logging."
   echo "10 - Enable HTTPS."
   echo "11 - Disable HTTP."
+  echo "12 - Set Jumbo Size."
 }
 
 userHasChosenAValidOption() {
