@@ -62,7 +62,11 @@ sendSetDoSDefendTypes() {
 sendSetDeviceDescription() {
   sendCommand "hostname $DEVICE_NAME"
   sendCommand "location $DEVICE_LOCATION"
-  sendCommand "contact-info $(decodeTextFromBase64 $CONTACT_INFO)"
+  sendCommand "contact-info $(decodeTextFromBase64 $DEVICE_CONTACT_INFO)"
+}
+
+sendSetSDMPreference() {
+  sendCommand "sdm prefer $SDM_PREFERENCE"
 }
 
 sendEnd() {

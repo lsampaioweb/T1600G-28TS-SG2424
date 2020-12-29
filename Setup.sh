@@ -34,12 +34,13 @@
 . option/JumboSize.sh
 . option/PrepareHostMachine.sh
 . option/RunAllSetupScripts.sh
+. option/SDMPreference.sh
 . option/SystemTimeUsingNTPServer.sh
 . option/UpgradeFirmware.sh
 
 # Variables
 chosenOption=-1
-amountOfOptions=15
+amountOfOptions=16
 
 # Methods
 sendBreakLine () {
@@ -78,6 +79,8 @@ runChosenOption () {
       setDeviceDescription ;;
     15)
       enableEEE ;;
+    16)
+      setSDMPreference ;;
   esac
   sendBreakLine
 }
@@ -99,6 +102,7 @@ displayMenu() {
   echo "13 - Enable DoS Defend."
   echo "14 - Set Device Description."
   echo "15 - Enable EEE."
+  echo "16 - Set SDM Preference."
 }
 
 userHasChosenAValidOption() {

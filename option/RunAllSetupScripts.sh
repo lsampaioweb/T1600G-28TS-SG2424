@@ -21,6 +21,7 @@ runAllSetupScripts () {
   enableDoSDefend
   setDeviceDescription
   enableEEE
+  setSDMPreference
 
   logInfo "Finished."
 }
