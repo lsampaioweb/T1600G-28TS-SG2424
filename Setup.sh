@@ -26,6 +26,7 @@
 . option/DeviceDescription.sh
 . option/DisableHTTP.sh
 . option/EnableDoSDefend.sh
+. option/EnableEEE.sh
 . option/EnableHTTPS.sh
 . option/EnablePasswordEncryption.sh
 . option/EnableRemoteLogging.sh
@@ -38,7 +39,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=14
+amountOfOptions=15
 
 # Methods
 sendBreakLine () {
@@ -75,6 +76,8 @@ runChosenOption () {
       enableDoSDefend ;;
     14)
       setDeviceDescription ;;
+    15)
+      enableEEE ;;
   esac
   sendBreakLine
 }
@@ -95,6 +98,7 @@ displayMenu() {
   echo "12 - Set Jumbo Size."
   echo "13 - Enable DoS Defend."
   echo "14 - Set Device Description."
+  echo "15 - Enable EEE."
 }
 
 userHasChosenAValidOption() {

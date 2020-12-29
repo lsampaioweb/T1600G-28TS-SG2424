@@ -20,6 +20,7 @@ runAllSetupScripts () {
   setJumboSize
   enableDoSDefend
   setDeviceDescription
+  enableEEE
 
   logInfo "Finished."
 }
