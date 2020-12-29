@@ -18,6 +18,7 @@ runAllSetupScripts () {
   enableHTTPS
   disableHTTP
   setJumboSize
+  enableDoSDefend
 
   logInfo "Finished."
 }

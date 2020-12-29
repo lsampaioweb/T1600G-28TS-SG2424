@@ -49,6 +49,16 @@ sendSetJumboSize() {
   sendCommand "jumbo-size $SIZE_OF_JUMBO_FRAME"
 }
 
+sendEnableDoSDefend() {
+  sendCommand "ip dos-prevent"
+}
+
+sendSetDoSDefendTypes() {
+  for i in $@ ; do
+    sendCommand "ip dos-prevent type $i"
+  done
+}
+
 sendEnd() {
   sendCommand "end"
 }

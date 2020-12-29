@@ -23,6 +23,7 @@
 . lib/TFTP.sh
 . option/CreateBotUser.sh
 . option/DisableHTTP.sh
+. option/EnableDoSDefend.sh
 . option/EnableHTTPS.sh
 . option/EnablePasswordEncryption.sh
 . option/EnableRemoteLogging.sh
@@ -35,7 +36,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=12
+amountOfOptions=13
 
 # Methods
 sendBreakLine () {
@@ -68,6 +69,8 @@ runChosenOption () {
       disableHTTP ;;
     12)
       setJumboSize ;;
+    13)
+      enableDoSDefend ;;
   esac
   sendBreakLine
 }
@@ -86,6 +89,7 @@ displayMenu() {
   echo "10 - Enable HTTPS."
   echo "11 - Disable HTTP."
   echo "12 - Set Jumbo Size."
+  echo "13 - Enable DoS Defend."
 }
 
 userHasChosenAValidOption() {

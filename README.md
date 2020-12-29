@@ -1,5 +1,5 @@
 # T1600G-28TS-SG2424
-Scripts to Setup the Switch Tplink SFP T1600G-28TS SG2424.
+Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 
 #### Options you can execute:
 1. Exit.
@@ -14,6 +14,7 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS SG2424.
 10. Enable HTTPS.
 11. Disable HTTP.
 12. Set Jumbo Size.
+13. Enable DoS Defend.
 
 #### Credentials:
 1. Create a strong password for the admin user and store it in the **MacOSX** Keychain.
