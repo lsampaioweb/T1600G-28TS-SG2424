@@ -19,6 +19,7 @@ runAllSetupScripts () {
   disableHTTP
   setJumboSize
   enableDoSDefend
+  setDeviceDescription
 
   logInfo "Finished."
 }

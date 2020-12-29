@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Description:  Scripts to setup the Switch Tplink SFP T1600G-28TS SG2424.
+# Description:  Scripts to setup the Switch Tplink SFP T1600G-28TS-SG2424.
 # Author:       Luciano Sampaio Martins de Souza
 # Date:         20-Dec-2020
 # Usage:        ./Setup.sh
@@ -10,6 +10,7 @@
 . command/Config.sh
 . command/Enable.sh
 . command/Management.sh
+. lib/Base64.sh
 . lib/Credential.sh
 . lib/Directory.sh
 . lib/File.sh
@@ -22,6 +23,7 @@
 . lib/Telnet.sh
 . lib/TFTP.sh
 . option/CreateBotUser.sh
+. option/DeviceDescription.sh
 . option/DisableHTTP.sh
 . option/EnableDoSDefend.sh
 . option/EnableHTTPS.sh
@@ -36,7 +38,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=13
+amountOfOptions=14
 
 # Methods
 sendBreakLine () {
@@ -71,6 +73,8 @@ runChosenOption () {
       setJumboSize ;;
     13)
       enableDoSDefend ;;
+    14)
+      setDeviceDescription ;;
   esac
   sendBreakLine
 }
@@ -90,6 +94,7 @@ displayMenu() {
   echo "11 - Disable HTTP."
   echo "12 - Set Jumbo Size."
   echo "13 - Enable DoS Defend."
+  echo "14 - Set Device Description."
 }
 
 userHasChosenAValidOption() {
