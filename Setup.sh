@@ -25,6 +25,7 @@
 . option/CreateBotUser.sh
 . option/DeviceDescription.sh
 . option/DisableHTTP.sh
+. option/DisableTelnet.sh
 . option/EnableDoSDefend.sh
 . option/EnableEEE.sh
 . option/EnableHTTPS.sh
@@ -40,7 +41,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=16
+amountOfOptions=17
 
 # Methods
 sendBreakLine () {
@@ -81,6 +82,8 @@ runChosenOption () {
       enableEEE ;;
     16)
       setSDMPreference ;;
+    17)
+      disableTelnet ;;
   esac
   sendBreakLine
 }
@@ -103,6 +106,7 @@ displayMenu() {
   echo "14 - Set Device Description."
   echo "15 - Enable EEE."
   echo "16 - Set SDM Preference."
+  echo "17 - Disable Telnet."
 }
 
 userHasChosenAValidOption() {

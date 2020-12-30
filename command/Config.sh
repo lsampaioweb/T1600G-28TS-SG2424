@@ -69,6 +69,10 @@ sendSetSDMPreference() {
   sendCommand "sdm prefer $SDM_PREFERENCE"
 }
 
+sendDisableTelnet() {
+  sendCommand "telnet disable"
+}
+
 sendEnd() {
   sendCommand "end"
 }

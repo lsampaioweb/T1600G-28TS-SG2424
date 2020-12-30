@@ -22,6 +22,7 @@ runAllSetupScripts () {
   setDeviceDescription
   enableEEE
   setSDMPreference
+  disableTelnet
 
   logInfo "Finished."
 }
