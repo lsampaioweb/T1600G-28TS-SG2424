@@ -17,4 +17,5 @@ setDeviceDescription () {
     sendExit
   ) | runSSH $USER_BOT@$DEVICE_IP
 
+  logInfo "Finished."
 }

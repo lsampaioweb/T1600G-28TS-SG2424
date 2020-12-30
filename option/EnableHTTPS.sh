@@ -34,4 +34,5 @@ enableHTTPS () {
 
   stopTFTPServer
 
+  logInfo "Finished."
 }

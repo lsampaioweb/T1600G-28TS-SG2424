@@ -17,4 +17,5 @@ enablePasswordEncryption () {
     sendExit
   ) | runSSH $USER_ADMIN@$DEVICE_IP
 
+  logInfo "Finished."
 }

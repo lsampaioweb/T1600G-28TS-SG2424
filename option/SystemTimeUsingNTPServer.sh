@@ -9,4 +9,5 @@ setSystemTimeUsingNTPServer () {
 
   expect -f option/SystemTimeUsingNTPServerExpect.sh  "$USER_BOT" "$DEVICE_IP" "$TIME_ZONE" "$PRIMARY_NTP_SERVER" "$SECONDARY_NTP_SERVER" "$NTP_UPDATE_RATE"
 
+  logInfo "Finished."
 }

@@ -9,4 +9,5 @@ enableEEE () {
 
   expect -f option/EnableEEEExpect.sh  "$USER_BOT" "$DEVICE_IP"
 
+  logInfo "Finished."
 }
