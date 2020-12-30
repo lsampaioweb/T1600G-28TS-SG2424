@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Description:  It Runs all setup scripts.
+# Description:  It runs all setup scripts.
 # Author:       Luciano Sampaio Martins de Souza
 # Date:         20-Dec-2020
 
@@ -10,7 +10,6 @@ runAllSetupScripts () {
 
   prepareHostMachine
   enableSSH
-  upgradeFirmware
   enablePasswordEncryption
   createBotUser
   setSystemTimeUsingNTPServer
@@ -28,7 +27,7 @@ runAllSetupScripts () {
   backup
 
   # Some changes will only take affect after the reboot.
-  reboot    
+  reboot
 
   logInfo "Finished."
 }

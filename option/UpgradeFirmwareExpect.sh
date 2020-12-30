@@ -13,7 +13,7 @@ set lineBreak "\r"
 spawn ssh $USER_ADMIN@$DEVICE_IP
 
 expect "${consoleMsg}>" { send "enable${lineBreak}" }
-expect "${consoleMsg}#" { send "firmware upgrade ip-address $ipAddress filename $filename${lineBreak}" }
-expect "*It will only upgrade the backup image. Continue?*" { send "Y${lineBreak}" }
-expect "*Reboot with the backup image?*" { send "Y${lineBreak}" }
+expect "${consoleMsg}#" { send "firmware upgrade ip-address $ipAddress filename ${filename}${lineBreak}" }
+expect "It will only upgrade the backup image. Continue? (Y/N):" { send "Y${lineBreak}" }
+expect "Reboot with the backup image? (Y/N):" { send "Y${lineBreak}" }
 interact

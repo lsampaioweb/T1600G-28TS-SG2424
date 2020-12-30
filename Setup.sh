@@ -63,31 +63,31 @@ runChosenOption () {
     4)
       enableSSH ;;
     5)
-      upgradeFirmware ;;
-    6)
       enablePasswordEncryption ;;
-    7)
+    6)
       createBotUser ;;
-    8)
+    7)
       setSystemTimeUsingNTPServer ;;
-    9)
+    8)
       enableRemoteLogging ;;
-    10)
+    9)
       enableHTTPS ;;
-    11)
+    10)
       disableHTTP ;;
-    12)
+    11)
       setJumboSize ;;
-    13)
+    12)
       enableDoSDefend ;;
-    14)
+    13)
       setDeviceDescription ;;
-    15)
+    14)
       enableEEE ;;
-    16)
+    15)
       setSDMPreference ;;
-    17)
+    16)
       disableTelnet ;;
+    17)
+      upgradeFirmware ;;
     18)
       backup ;;
     19)
