@@ -15,3 +15,7 @@ sendSaveSettings() {
 sendBackupStartupConfig() {
   sendCommand "copy startup-config tftp ip-address $1 filename $2"
 }
+
+sendResetWithFactorySettingsExceptIP() {
+  sendCommand "reset except-ip"
+}

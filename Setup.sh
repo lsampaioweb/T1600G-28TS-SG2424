@@ -36,6 +36,7 @@
 . option/JumboSize.sh
 . option/PrepareHostMachine.sh
 . option/Reboot.sh
+. option/ResetWithFactorySettings.sh
 . option/RunAllSetupScripts.sh
 . option/SDMPreference.sh
 . option/SystemTimeUsingNTPServer.sh
@@ -43,7 +44,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=19
+amountOfOptions=20
 
 # Methods
 sendBreakLine () {
@@ -90,6 +91,8 @@ runChosenOption () {
       backup ;;
     19)
       reboot ;;
+    20)
+      resetWithFactorySettings ;;
   esac
   sendBreakLine
 }
@@ -115,6 +118,7 @@ displayMenu() {
   echo "17 - Disable Telnet."
   echo "18 - Backup."
   echo "19 - Reboot."
+  echo "20 - Reset with Factory Settings."
 }
 
 userHasChosenAValidOption() {
