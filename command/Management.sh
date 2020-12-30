@@ -14,6 +14,10 @@ sendEnable() {
   sendCommand "enable"
 }
 
+sendYes() {
+  sendCommand "Y"
+}
+
 sendExit() {
   sendCommand "exit"
 }

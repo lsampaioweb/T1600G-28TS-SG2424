@@ -37,6 +37,7 @@
 . option/PrepareHostMachine.sh
 . option/Reboot.sh
 . option/ResetWithFactorySettings.sh
+. option/RestoreSettingsFromLatestBackup.sh
 . option/RunAllSetupScripts.sh
 . option/SDMPreference.sh
 . option/SystemTimeUsingNTPServer.sh
@@ -44,7 +45,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=20
+amountOfOptions=21
 
 # Methods
 sendBreakLine () {
@@ -93,6 +94,8 @@ runChosenOption () {
       reboot ;;
     20)
       resetWithFactorySettings ;;
+    21)
+      restoreSettingsFromLatestBackup ;;
   esac
   sendBreakLine
 }
@@ -119,6 +122,7 @@ displayMenu() {
   echo "18 - Backup."
   echo "19 - Reboot."
   echo "20 - Reset with Factory Settings."
+  echo "21 - Restore Settings from Latest Backup."
 }
 
 userHasChosenAValidOption() {
