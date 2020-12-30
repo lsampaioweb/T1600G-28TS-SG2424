@@ -11,3 +11,6 @@ certificate/*.pem
 
 ### Firmware ###
 firmware/*.zip
+
+### Backup ###
+backup/backup*

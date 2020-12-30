@@ -11,3 +11,7 @@ sendConfig() {
 sendSaveSettings() {
   sendCommand "copy running-config startup-config"
 }
+
+sendBackupStartupConfig() {
+  sendCommand "copy startup-config tftp ip-address $1 filename $2"
+}

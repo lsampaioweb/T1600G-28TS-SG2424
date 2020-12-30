@@ -24,5 +24,8 @@ runAllSetupScripts () {
   setSDMPreference
   disableTelnet
 
+  # The final step is to create a backup and save it in the control machine.
+  backup  
+
   logInfo "Finished."
 }

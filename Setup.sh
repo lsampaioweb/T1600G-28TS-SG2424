@@ -22,6 +22,7 @@
 . lib/SSH.sh
 . lib/Telnet.sh
 . lib/TFTP.sh
+. option/Backup.sh
 . option/CreateBotUser.sh
 . option/DeviceDescription.sh
 . option/DisableHTTP.sh
@@ -41,7 +42,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=17
+amountOfOptions=18
 
 # Methods
 sendBreakLine () {
@@ -84,6 +85,8 @@ runChosenOption () {
       setSDMPreference ;;
     17)
       disableTelnet ;;
+    18)
+      backup ;;
   esac
   sendBreakLine
 }
@@ -107,6 +110,7 @@ displayMenu() {
   echo "15 - Enable EEE."
   echo "16 - Set SDM Preference."
   echo "17 - Disable Telnet."
+  echo "18 - Backup."
 }
 
 userHasChosenAValidOption() {

@@ -30,6 +30,12 @@ copyFileToTFTPFolder () {
   sudo cp -p "$1" "$TFTP_DIRECTORY"
 }
 
+copyFileFromTFTPFolder () {
+  logDebug "Copying file: ${TFTP_DIRECTORY}${1} to $2"
+
+  sudo cp -p "${TFTP_DIRECTORY}${1}" "$2"
+}
+
 deleteFileFromTFTPFolder () {
   logDebug "Deleting file: ${TFTP_DIRECTORY}${1}"
 
