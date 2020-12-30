@@ -35,6 +35,7 @@
 . option/EnableSSH.sh
 . option/JumboSize.sh
 . option/PrepareHostMachine.sh
+. option/Reboot.sh
 . option/RunAllSetupScripts.sh
 . option/SDMPreference.sh
 . option/SystemTimeUsingNTPServer.sh
@@ -42,7 +43,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=18
+amountOfOptions=19
 
 # Methods
 sendBreakLine () {
@@ -87,6 +88,8 @@ runChosenOption () {
       disableTelnet ;;
     18)
       backup ;;
+    19)
+      reboot ;;
   esac
   sendBreakLine
 }
@@ -111,6 +114,7 @@ displayMenu() {
   echo "16 - Set SDM Preference."
   echo "17 - Disable Telnet."
   echo "18 - Backup."
+  echo "19 - Reboot."
 }
 
 userHasChosenAValidOption() {

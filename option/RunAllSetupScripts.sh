@@ -25,7 +25,10 @@ runAllSetupScripts () {
   disableTelnet
 
   # The final step is to create a backup and save it in the control machine.
-  backup  
+  backup
+
+  # Some changes will only take affect after the reboot.
+  reboot    
 
   logInfo "Finished."
 }
