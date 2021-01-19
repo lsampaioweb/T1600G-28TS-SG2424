@@ -9,8 +9,6 @@ createBotUser () {
 
   botPassword=$(getRandomPassword)
 
-  saveBotPasswordInKeyChain "$botPassword"
-
   (
     sendEnable
     sendConfig
@@ -20,6 +18,8 @@ createBotUser () {
     sendExit
     sendExit
   ) | runSSH $USER_ADMIN@$DEVICE_IP
+
+  saveBotPasswordInKeyChain "$botPassword"
 
   logInfo "Finished."
 }
