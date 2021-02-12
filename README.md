@@ -17,12 +17,13 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 13. Set Device Description.
 14. Enable EEE.
 15. Set SDM Preference.
-16. Disable Telnet.
-17. Upgrade Firmware.
-18. Backup.
-19. Reboot.
-20. Reset with Factory Settings.
-21. Restore Settings from Latest Backup.
+16. Set Vlans.
+17. Disable Telnet.
+18. Upgrade Firmware.
+19. Backup.
+20. Reboot.
+21. Reset with Factory Settings.
+22. Restore Settings from Latest Backup.
 
 #### Credentials:
 1. Create a strong password for the admin user and store it in the **MacOSX** Keychain.
@@ -36,7 +37,7 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 ```
 
 #### Contact-Info:
-1. Add your email as the contact-info, but in order to avoid spammer, encode it in base64.
+1. Add your email as the contact-info, but in order to avoid spammers, encode it in base64.
 ```bash
     echo "your-email@something.com" | base64
 ```

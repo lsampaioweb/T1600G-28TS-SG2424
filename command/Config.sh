@@ -69,6 +69,16 @@ sendSetSDMPreference() {
   sendCommand "sdm prefer $SDM_PREFERENCE"
 }
 
+sendCreateVlan() {
+  sendCommand "vlan $1"
+  sendCommand "name $2"
+}
+
+sendAssignPortToVlan() {
+  sendCommand "interface range gigabitEthernet $2"
+  sendCommand "switchport general allowed vlan $1 untagged"
+}
+
 sendDisableTelnet() {
   sendCommand "telnet disable"
 }

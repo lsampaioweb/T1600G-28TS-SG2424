@@ -21,6 +21,7 @@ runAllSetupScripts () {
   setDeviceDescription
   enableEEE
   setSDMPreference
+  setVlans
   disableTelnet
 
   # The final step is to create a backup and save it in the control machine.

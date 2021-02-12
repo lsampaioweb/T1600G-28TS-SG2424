@@ -27,7 +27,7 @@ upgradeFirmware () {
 
   ipAddress=$(getIpAddress)
 
-  expect -f option/UpgradeFirmwareExpect.sh "$USER_ADMIN" "$DEVICE_IP" "$ipAddress" "$FIRMWARE_FILE_NAME_BIN"
+  expect -f option/FirmwareExpect.sh "$USER_ADMIN" "$DEVICE_IP" "$ipAddress" "$FIRMWARE_FILE_NAME_BIN"
 
   # Delete files that will not be used anymore.
   deleteFileFromTFTPFolder "$FIRMWARE_FILE_NAME_BIN"

@@ -59,3 +59,11 @@ KEYCHAIN_PATH="/Library/Keychains/System.keychain"
 
 BACKUP_PATH="backup/"
 BACKUP_NAME="backup-startup-config-"
+
+PROXMOX_VLAN_ID="2"
+PROXMOX_VLAN_NAME="Proxmox-VLAN"
+PROXMOX_VLAN_PORTS="1/0/1,1/0/7,1/0/15,1/0/23"
+
+VMS_VLAN_ID="3"
+VMS_VLAN_NAME="VMs-VLAN"
+VMS_VLAN_PORTS="1/0/1-2,1/0/4,1/0/6,1/0/8,1/0/10,1/0/12,1/0/14,1/0/16,1/0/18,1/0/20,1/0/22,1/0/24"
