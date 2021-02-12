@@ -22,30 +22,31 @@
 . lib/SSH.sh
 . lib/Telnet.sh
 . lib/TFTP.sh
+. option/AllSetupScripts.sh
 . option/Backup.sh
-. option/CreateBotUser.sh
 . option/DeviceDescription.sh
-. option/DisableHTTP.sh
-. option/DisableTelnet.sh
-. option/EnableDoSDefend.sh
-. option/EnableEEE.sh
-. option/EnableHTTPS.sh
-. option/EnablePasswordEncryption.sh
-. option/EnableRemoteLogging.sh
-. option/EnableSSH.sh
+. option/DoSDefend.sh
+. option/EEE.sh
+. option/FactorySettings.sh
+. option/Firmware.sh
+. option/HostMachine.sh
+. option/HTTP.sh
+. option/HTTPS.sh
 . option/JumboSize.sh
-. option/PrepareHostMachine.sh
+. option/PasswordEncryption.sh
 . option/Reboot.sh
-. option/ResetWithFactorySettings.sh
+. option/RemoteLogging.sh
 . option/RestoreSettingsFromLatestBackup.sh
-. option/RunAllSetupScripts.sh
 . option/SDMPreference.sh
+. option/SSH.sh
 . option/SystemTimeUsingNTPServer.sh
-. option/UpgradeFirmware.sh
+. option/Telnet.sh
+. option/User.sh
+. option/Vlan.sh
 
 # Variables
 chosenOption=-1
-amountOfOptions=21
+amountOfOptions=22
 
 # Methods
 sendBreakLine () {
@@ -85,16 +86,18 @@ runChosenOption () {
     15)
       setSDMPreference ;;
     16)
-      disableTelnet ;;
+      setVlans ;;
     17)
-      upgradeFirmware ;;
+      disableTelnet ;;
     18)
-      backup ;;
+      upgradeFirmware ;;
     19)
-      reboot ;;
+      backup ;;
     20)
-      resetWithFactorySettings ;;
+      reboot ;;
     21)
+      resetWithFactorySettings ;;
+    22)
       restoreSettingsFromLatestBackup ;;
   esac
   sendBreakLine
@@ -117,12 +120,13 @@ displayMenu() {
   echo "13 - Set Device Description."
   echo "14 - Enable EEE."
   echo "15 - Set SDM Preference."
-  echo "16 - Disable Telnet."
-  echo "17 - Upgrade Firmware."
-  echo "18 - Backup."
-  echo "19 - Reboot."
-  echo "20 - Reset with Factory Settings."
-  echo "21 - Restore Settings from Latest Backup."
+  echo "16 - Set Vlans."
+  echo "17 - Disable Telnet."
+  echo "18 - Upgrade Firmware."
+  echo "19 - Backup."
+  echo "20 - Reboot."
+  echo "21 - Reset with Factory Settings."
+  echo "22 - Restore Settings from Latest Backup."
 }
 
 userHasChosenAValidOption() {
