@@ -12,11 +12,13 @@ setVlans () {
     sendConfig
     sendCreateVlan "$PROXMOX_VLAN_ID" "$PROXMOX_VLAN_NAME"
     sendExit
-    sendAssignPortToVlan "$PROXMOX_VLAN_ID" "$PROXMOX_VLAN_PORTS"
+    sendAssignPortToVlan "$PROXMOX_VLAN_ID" "$INTERNET_VLAN_PORT,$PROXMOX_VLAN_PORTS"
+    sendSetPVIDofPort "$PROXMOX_VLAN_ID" "$PROXMOX_VLAN_PORTS"
     sendExit
     sendCreateVlan "$VMS_VLAN_ID" "$VMS_VLAN_NAME"
     sendExit
-    sendAssignPortToVlan "$VMS_VLAN_ID" "$VMS_VLAN_PORTS"
+    sendAssignPortToVlan "$VMS_VLAN_ID" "$INTERNET_VLAN_PORT,$VMS_VLAN_PORTS"
+    sendSetPVIDofPort "$VMS_VLAN_ID" "$VMS_VLAN_PORTS"
     sendEnd
     sendSaveSettings
     sendExit

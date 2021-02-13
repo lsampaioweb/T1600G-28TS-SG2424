@@ -74,9 +74,18 @@ sendCreateVlan() {
   sendCommand "name $2"
 }
 
+sendInterfaceRangeGigabitEthernet() {
+  sendCommand "interface range gigabitEthernet $1"
+}
+
 sendAssignPortToVlan() {
-  sendCommand "interface range gigabitEthernet $2"
+  sendInterfaceRangeGigabitEthernet $2
   sendCommand "switchport general allowed vlan $1 untagged"
+}
+
+sendSetPVIDofPort() {
+  sendInterfaceRangeGigabitEthernet $2
+  sendCommand "switchport pvid $1"
 }
 
 sendDisableTelnet() {
