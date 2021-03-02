@@ -65,10 +65,6 @@ sendSetDeviceDescription() {
   sendCommand "contact-info $(decodeTextFromBase64 $DEVICE_CONTACT_INFO)"
 }
 
-sendSetSDMPreference() {
-  sendCommand "sdm prefer $SDM_PREFERENCE"
-}
-
 sendCreateVlan() {
   sendCommand "vlan $1"
   sendCommand "name $2"
@@ -90,6 +86,10 @@ sendSetPVIDofPort() {
 
 sendDisableTelnet() {
   sendCommand "telnet disable"
+}
+
+sendSetSDMPreference() {
+  sendCommand "sdm prefer $SDM_PREFERENCE"
 }
 
 sendEnd() {

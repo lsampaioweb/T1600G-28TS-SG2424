@@ -10,6 +10,7 @@ resetWithFactorySettings () {
   (
     sendEnable
     sendResetWithFactorySettingsExceptIP
+    sendYes
     sendEnd
     sendExit
     sendExit

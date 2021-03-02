@@ -5,7 +5,7 @@
 # Date:         29-Dec-2020
 
 getDateTimeForName () {
-  date "+%Y-%m-%d-%k-%M-%S"
+  date "+%Y-%m-%d-%H-%M-%S"
 }
 
 createEmptyBackupFile () {
@@ -31,8 +31,8 @@ backup () {
   startTFTPServer
 
   dateTime=$(getDateTimeForName)
-  backupFileName=${BACKUP_NAME}${dateTime}
-  backupPathAndName=${BACKUP_PATH}${backupFileName}
+  backupFileName="${BACKUP_NAME}${dateTime}${BACKUP_EXTENSION}"
+  backupPathAndName="${BACKUP_PATH}${backupFileName}"
 
   createEmptyBackupFile "$backupPathAndName"
 

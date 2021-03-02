@@ -84,11 +84,11 @@ runChosenOption () {
     14)
       enableEEE ;;
     15)
-      setSDMPreference ;;
-    16)
       setVlans ;;
-    17)
+    16)
       disableTelnet ;;
+    17)
+      setSDMPreference ;;
     18)
       upgradeFirmware ;;
     19)
@@ -119,9 +119,9 @@ displayMenu() {
   echo "12 - Enable DoS Defend."
   echo "13 - Set Device Description."
   echo "14 - Enable EEE."
-  echo "15 - Set SDM Preference."
-  echo "16 - Set Vlans."
-  echo "17 - Disable Telnet."
+  echo "15 - Set Vlans."
+  echo "16 - Disable Telnet."
+  echo "17 - Set SDM Preference."  
   echo "18 - Upgrade Firmware."
   echo "19 - Backup."
   echo "20 - Reboot."

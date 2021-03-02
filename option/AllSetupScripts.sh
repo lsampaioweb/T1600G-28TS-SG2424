@@ -20,9 +20,9 @@ runAllSetupScripts () {
   enableDoSDefend
   setDeviceDescription
   enableEEE
-  setSDMPreference
   setVlans
   disableTelnet
+  setSDMPreference
 
   # The final step is to create a backup and save it in the control machine.
   backup
