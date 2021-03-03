@@ -20,7 +20,9 @@ runAllSetupScripts () {
   enableDoSDefend
   setDeviceDescription
   enableEEE
+  setLACP
   setVlans
+  setPVID
   disableTelnet
   setSDMPreference
 

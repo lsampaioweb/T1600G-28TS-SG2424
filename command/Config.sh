@@ -74,13 +74,37 @@ sendInterfaceRangeGigabitEthernet() {
   sendCommand "interface range gigabitEthernet $1"
 }
 
+sendInterfaceRangePortChannel() {
+  sendCommand "interface range port-channel $1"
+}
+
 sendAssignPortToVlan() {
   sendInterfaceRangeGigabitEthernet $2
-  sendCommand "switchport general allowed vlan $1 untagged"
+  sendCommand "switchport general allowed vlan $1 $3"
+}
+
+sendAssignPortToVlanUntagged() {
+  sendAssignPortToVlan "$1" "$2" "untagged"
+}
+
+sendAssignPortToVlanTagged() {
+  sendAssignPortToVlan "$1" "$2" "tagged"
+}
+
+sendAssignLAGToVlan() {
+  sendInterfaceRangePortChannel $2
+  sendCommand "switchport general allowed vlan $1 $3"
+}
+
+sendAssignLAGToVlanUntagged() {
+  sendAssignLAGToVlan "$1" "$2" "untagged"
+}
+
+sendAssignLAGToVlanTagged() {
+  sendAssignLAGToVlan "$1" "$2" "tagged"
 }
 
 sendSetPVIDofPort() {
-  sendInterfaceRangeGigabitEthernet $2
   sendCommand "switchport pvid $1"
 }
 
@@ -90,6 +114,18 @@ sendDisableTelnet() {
 
 sendSetSDMPreference() {
   sendCommand "sdm prefer $SDM_PREFERENCE"
+}
+
+sendLACPLoadBalancingAlgorithm() {
+  sendCommand "port-channel load-balance $1"
+}
+
+sendLACPGroupModePassive() {
+  sendCommand "channel-group $1 mode passive"
+}
+
+sendLACPPortPriority() {
+  sendCommand "lacp port-priority $1"
 }
 
 sendEnd() {

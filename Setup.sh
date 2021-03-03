@@ -33,7 +33,9 @@
 . option/HTTP.sh
 . option/HTTPS.sh
 . option/JumboSize.sh
+. option/LACP.sh
 . option/PasswordEncryption.sh
+. option/PVID.sh
 . option/Reboot.sh
 . option/RemoteLogging.sh
 . option/RestoreSettingsFromLatestBackup.sh
@@ -46,7 +48,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=22
+amountOfOptions=24
 
 # Methods
 sendBreakLine () {
@@ -84,49 +86,56 @@ runChosenOption () {
     14)
       enableEEE ;;
     15)
-      setVlans ;;
+      setLACP ;;
     16)
-      disableTelnet ;;
+      setVlans ;;
     17)
-      setSDMPreference ;;
+      setPVID ;;
     18)
-      upgradeFirmware ;;
+      disableTelnet ;;
     19)
-      backup ;;
+      setSDMPreference ;;
     20)
-      reboot ;;
+      upgradeFirmware ;;
     21)
-      resetWithFactorySettings ;;
+      backup ;;
     22)
+      reboot ;;
+    23)
+      resetWithFactorySettings ;;
+    24)
       restoreSettingsFromLatestBackup ;;
   esac
   sendBreakLine
 }
 
 displayMenu() {
-  echo "Type the number of the option you want to execute. [1-$1]"
-  echo " 1 - Exit."
-  echo " 2 - Setup Switch from Zero to Hero!"
-  echo " 3 - Prepare Host Machine."
-  echo " 4 - Enable SSH."
-  echo " 5 - Enable Password Encryption."
-  echo " 6 - Create Bot User."
-  echo " 7 - Set System Time from NTP Server."
-  echo " 8 - Enable Remote Logging."
-  echo " 9 - Enable HTTPS."
-  echo "10 - Disable HTTP."
-  echo "11 - Set Jumbo Size."
-  echo "12 - Enable DoS Defend."
-  echo "13 - Set Device Description."
-  echo "14 - Enable EEE."
-  echo "15 - Set Vlans."
-  echo "16 - Disable Telnet."
-  echo "17 - Set SDM Preference."  
-  echo "18 - Upgrade Firmware."
-  echo "19 - Backup."
-  echo "20 - Reboot."
-  echo "21 - Reset with Factory Settings."
-  echo "22 - Restore Settings from Latest Backup."
+  index=1
+  echo "Type the number of the option you want to execute. [$index-$1]"
+  echo "$((index++)) - Exit."
+  echo "$((index++)) - Setup Switch from Zero to Hero!"
+  echo "$((index++)) - Prepare Host Machine."
+  echo "$((index++)) - Enable SSH."
+  echo "$((index++)) - Enable Password Encryption."
+  echo "$((index++)) - Create Bot User."
+  echo "$((index++)) - Set System Time from NTP Server."
+  echo "$((index++)) - Enable Remote Logging."
+  echo "$((index++)) - Enable HTTPS."
+  echo "$((index++)) - Disable HTTP."
+  echo "$((index++)) - Set Jumbo Size."
+  echo "$((index++)) - Enable DoS Defend."
+  echo "$((index++)) - Set Device Description."
+  echo "$((index++)) - Enable EEE."
+  echo "$((index++)) - Set Link Aggregation Control Protocol."
+  echo "$((index++)) - Set Vlans."
+  echo "$((index++)) - Set PVID."
+  echo "$((index++)) - Disable Telnet."
+  echo "$((index++)) - Set SDM Preference."
+  echo "$((index++)) - Upgrade Firmware."
+  echo "$((index++)) - Backup."
+  echo "$((index++)) - Reboot."
+  echo "$((index++)) - Reset with Factory Settings."
+  echo "$((index++)) - Restore Settings from Latest Backup."
 }
 
 userHasChosenAValidOption() {
