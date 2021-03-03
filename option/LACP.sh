@@ -19,6 +19,7 @@ setLACPGroups () {
     sendEnable
     sendConfig
     for file in $LACP_PATH_OF_GROUPS_VARIABLES ; do
+      # Include file
       . $file
 
       sendInterfaceRangeGigabitEthernet "$PORTS"

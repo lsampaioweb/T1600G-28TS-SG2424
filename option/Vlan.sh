@@ -10,19 +10,32 @@ setVlans () {
   (
     sendEnable
     sendConfig
-    sendCreateVlan "$PROXMOX_VLAN_ID" "$PROXMOX_VLAN_NAME"
-    sendExit
-    sendAssignPortToVlan "$PROXMOX_VLAN_ID" "$INTERNET_VLAN_PORT,$PROXMOX_VLAN_PORTS"
-    sendSetPVIDofPort "$PROXMOX_VLAN_ID" "$PROXMOX_VLAN_PORTS"
-    sendExit
-    sendCreateVlan "$VMS_VLAN_ID" "$VMS_VLAN_NAME"
-    sendExit
-    sendAssignPortToVlan "$VMS_VLAN_ID" "$INTERNET_VLAN_PORT,$VMS_VLAN_PORTS"
-    sendSetPVIDofPort "$VMS_VLAN_ID" "$VMS_VLAN_PORTS"
+    for file in $VLAN_PATH_OF_VARIABLES ; do
+      # Include file
+      . $file
+
+      sendCreateVlan "$VLAN_ID" "$VLAN_NAME"
+      sendExit
+      if [ ! -z "$UNTAGGED_PORTS" ]; then
+        sendAssignPortToVlanUntagged "$VLAN_ID" "$UNTAGGED_PORTS"
+      fi
+
+      if [ ! -z "$TAGGED_PORTS" ]; then
+        sendAssignPortToVlanTagged "$VLAN_ID" "$TAGGED_PORTS"
+      fi
+
+      if [ ! -z "$UNTAGGED_LAGS" ]; then
+        sendAssignLAGToVlanUntagged "$VLAN_ID" "$UNTAGGED_LAGS"
+      fi
+
+      if [ ! -z "$TAGGED_LAGS" ]; then
+        sendAssignLAGToVlanTagged "$VLAN_ID" "$TAGGED_LAGS"
+      fi
+
+      sendExit
+    done
     sendEnd
     sendSaveSettings
-    sendExit
-    sendExit
   ) | runSSH $USER_BOT@$DEVICE_IP
 
   logInfo "Finished."
