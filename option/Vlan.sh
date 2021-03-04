@@ -18,22 +18,25 @@ setVlans () {
       sendExit
       if [ ! -z "$UNTAGGED_PORTS" ]; then
         sendAssignPortToVlanUntagged "$VLAN_ID" "$UNTAGGED_PORTS"
+        sendExit
       fi
 
       if [ ! -z "$TAGGED_PORTS" ]; then
         sendAssignPortToVlanTagged "$VLAN_ID" "$TAGGED_PORTS"
+        sendExit
       fi
 
-      if [ ! -z "$UNTAGGED_LAGS" ]; then
-        sendAssignLAGToVlanUntagged "$VLAN_ID" "$UNTAGGED_LAGS"
+      if [ ! -z "$UNTAGGED_LAG" ]; then
+        sendAssignLAGToVlanUntagged "$VLAN_ID" "$UNTAGGED_LAG"
+        sendExit
       fi
 
-      if [ ! -z "$TAGGED_LAGS" ]; then
-        sendAssignLAGToVlanTagged "$VLAN_ID" "$TAGGED_LAGS"
+      if [ ! -z "$TAGGED_LAG" ]; then
+        sendAssignLAGToVlanTagged "$VLAN_ID" "$TAGGED_LAG"
+        sendExit
       fi
-
-      sendExit
     done
+    
     sendEnd
     sendSaveSettings
   ) | runSSH $USER_BOT@$DEVICE_IP

@@ -11,22 +11,21 @@ setPVID () {
     sendEnable
     sendConfig
 
-    for file in $PVID_PATH_OF_PORT_VARIABLES ; do
+    for file in $VLAN_PATH_OF_VARIABLES ; do
       # Include file
       . $file
 
-      sendInterfaceRangeGigabitEthernet "$PORTS"
-      sendSetPVIDofPort "$VLAN_ID"
-      sendExit
-    done
+      if [ ! -z "$PVID_PORTS" ]; then
+        sendInterfaceRangeGigabitEthernet "$PVID_PORTS"
+        sendSetPVIDofPort "$VLAN_ID"
+        sendExit
+      fi
 
-    for file in $PVID_PATH_OF_LAG_VARIABLES ; do
-      # Include file
-      . $file
-
-      sendInterfaceRangePortChannel "$PORTS"
-      sendSetPVIDofPort "$VLAN_ID"
-      sendExit
+      if [ ! -z "$PVID_LAG_PORTS" ]; then
+        sendInterfaceRangePortChannel "$PVID_LAG_PORTS"
+        sendSetPVIDofPort "$VLAN_ID"
+        sendExit
+      fi
     done
 
     sendEnd

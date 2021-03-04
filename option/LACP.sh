@@ -25,6 +25,7 @@ setLACPGroups () {
       sendInterfaceRangeGigabitEthernet "$PORTS"
       sendLACPGroupModePassive "$GROUP_ID"
       sendLACPPortPriority "$PORT_PRIORITY"
+      sendExit
     done
     sendEnd
     sendSaveSettings
