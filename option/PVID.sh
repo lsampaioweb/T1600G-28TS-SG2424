@@ -15,13 +15,13 @@ setPVID () {
       # Include file
       . $file
 
-      if [ ! -z "$PVID_PORTS" ]; then
+      if ( stringIsNotEmpty "$PVID_PORTS"); then
         sendInterfaceRangeGigabitEthernet "$PVID_PORTS"
         sendSetPVIDofPort "$VLAN_ID"
         sendExit
       fi
 
-      if [ ! -z "$PVID_LAG_PORTS" ]; then
+      if ( stringIsNotEmpty "$PVID_LAG_PORTS"); then
         sendInterfaceRangePortChannel "$PVID_LAG_PORTS"
         sendSetPVIDofPort "$VLAN_ID"
         sendExit

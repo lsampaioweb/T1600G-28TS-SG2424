@@ -15,7 +15,7 @@ setInterfaces () {
       # Include file
       . $file
 
-      if [ ! -z "$IP_ADDRESS" ]; then
+      if ( stringIsNotEmpty "$IP_ADDRESS"); then
         sendInterfaceVlan "$VLAN_ID"
         sendDescription "$VLAN_NAME"
         sendIpAddress "$IP_ADDRESS" "$SUBNET_MASK"

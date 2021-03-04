@@ -20,6 +20,7 @@
 . lib/Log.sh
 . lib/PackageManager.sh
 . lib/SSH.sh
+. lib/String.sh
 . lib/Telnet.sh
 . lib/TFTP.sh
 . option/AllSetupScripts.sh
