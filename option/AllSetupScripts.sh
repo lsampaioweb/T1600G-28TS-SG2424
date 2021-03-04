@@ -23,6 +23,8 @@ runAllSetupScripts () {
   setLACP
   setVlans
   setPVID
+  setInterfaces
+  setDHCP
   disableTelnet
   setSDMPreference
 

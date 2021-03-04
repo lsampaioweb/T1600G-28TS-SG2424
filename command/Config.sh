@@ -128,6 +128,18 @@ sendLACPPortPriority() {
   sendCommand "lacp port-priority $1"
 }
 
+sendInterfaceVlan() {
+  sendCommand "interface vlan $1"
+}
+
+sendDescription() {
+  sendCommand "description $1"
+}
+
+sendIpAddress() {
+  sendCommand "ip address $1 $2"
+}
+
 sendEnd() {
   sendCommand "end"
 }
