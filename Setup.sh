@@ -26,6 +26,7 @@
 . option/AllSetupScripts.sh
 . option/Backup.sh
 . option/DeviceDescription.sh
+. option/DHCP.sh
 . option/DoSDefend.sh
 . option/EEE.sh
 . option/FactorySettings.sh
