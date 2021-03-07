@@ -36,7 +36,7 @@ createDHCPPools () {
         sendDHCPPoolDNS "$DNS_SERVER"
         sendExit
 
-        sendDHCPExcludedAddress "$IP_RANGE"
+        sendDHCPExcludedAddress "$EXCLUDED_ADDRESS"
       fi
     done
 
