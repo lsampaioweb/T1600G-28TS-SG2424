@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Set the System Time using NTP Servers.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         21-Dec-2020
 
 setSystemTimeUsingNTPServer () {

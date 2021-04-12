@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It encodes and decodes Base64 data.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 encodeTextInBase64() {

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It contains scripts related with directories.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         21-Dec-2020
 
 directoryExists () {

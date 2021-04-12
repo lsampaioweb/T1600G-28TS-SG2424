@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It reboots the switch. It usually takes around 3 minutes to come back.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 reboot () {

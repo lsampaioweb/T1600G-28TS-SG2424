@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Scripts to setup the Switch Tplink SFP T1600G-28TS-SG2424.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 # Usage:        ./Setup.sh
 

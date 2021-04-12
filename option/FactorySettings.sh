@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Reset all configurations (except the ip) to the factory settings.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 resetWithFactorySettings () {

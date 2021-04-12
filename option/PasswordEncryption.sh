@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  The command is used to encrypt the password when the password is defined or when the configuration is written.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         21-Dec-2020
 
 enablePasswordEncryption () {

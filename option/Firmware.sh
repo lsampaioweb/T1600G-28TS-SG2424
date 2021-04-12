@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Upgrade the switch’s firmware via TFTP server.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 
 upgradeFirmware () {

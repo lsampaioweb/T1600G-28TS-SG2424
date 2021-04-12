@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It enables HTTPS interface.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         21-Dec-2020
 
 enableHTTPS () {

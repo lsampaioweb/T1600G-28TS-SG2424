@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It contains the commands that can be sent to the switch.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 
 sendEnableSSHServer() {

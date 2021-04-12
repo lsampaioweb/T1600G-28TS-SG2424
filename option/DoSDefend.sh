@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  The DoS (Denial of Service) defend feature provides protection against DoS attacks. With DoS Defend, the switch can analyze specific fields of the IP packets, distinguish the malicious DoS attack packets and discard them directly. In addition, DoS Defend can limit the transmission rate of legal packets.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 enableDoSDefend () {

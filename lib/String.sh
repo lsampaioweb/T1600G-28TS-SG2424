@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It contains scripts related with strings.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         03-Mar-2021
 
 stringIsEmpty () {

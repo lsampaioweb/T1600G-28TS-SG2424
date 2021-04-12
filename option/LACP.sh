@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Set the Link Aggregation Control Protocol (LACP).
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         03-Mar-2021
 
 setLACPLoadBalancingAlgorithm () {

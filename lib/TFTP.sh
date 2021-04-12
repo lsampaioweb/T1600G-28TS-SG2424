@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It contains methods related TFTP commands.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 # Links:        https://www.wirelessphreak.com/2016/07/using-built-in-tftp-server-on-os-x-el.html
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It restores all settings from the latest Backup.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 getLatestBackupFile () {

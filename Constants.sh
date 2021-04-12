@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It contains all common values that are used by several scripts.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 
 DEBUG=true

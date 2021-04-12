@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It disables the telnet (23) interface.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 disableTelnet () {

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Create the user that will be used by the script to perform tasks in the switch. The ideia is not to use the admin user.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         21-Dec-2020
 
 createBotUser () {

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Enable DHCP and create the pools.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         03-Mar-2021
 
 enableDHCP () {

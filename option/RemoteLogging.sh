@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It enables the switch to send its logs to a remote server.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         21-Dec-2020
 
 enableRemoteLogging () {

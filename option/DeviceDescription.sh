@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Set the device description.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 setDeviceDescription () {

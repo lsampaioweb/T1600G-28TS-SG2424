@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It creates a backup of the switches configuration.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 getDateTimeForName () {

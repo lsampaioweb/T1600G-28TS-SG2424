@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Create the Vlans (Proxmox Hosts and Vms).
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         11-Feb-2021
 
 setVlans () {

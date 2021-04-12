@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Create an interface for a Vlan.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         03-Mar-2021
 
 setInterfaces () {

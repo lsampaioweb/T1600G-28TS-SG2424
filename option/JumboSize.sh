@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Globally configure the size of jumbo frames to 9000.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         21-Dec-2020
 
 setJumboSize () {

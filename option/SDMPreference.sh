@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  SDM (Switch Database Management) Template is used to distribute system resources to different applications such as ACL and ARP Detection.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 setSDMPreference () {

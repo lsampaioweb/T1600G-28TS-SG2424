@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Prepare the host machine with all the directories, files and permissions necessary to interact with the switch.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 
 prepareHostMachine () {

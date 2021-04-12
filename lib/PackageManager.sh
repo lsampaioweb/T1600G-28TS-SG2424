@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It contains scripts related with packages.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 
 isPackageInstalled () {

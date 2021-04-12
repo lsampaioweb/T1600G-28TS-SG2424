@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Enable EEE (Energy Efficient Ethernet) on the ports.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         29-Dec-2020
 
 enableEEE () {

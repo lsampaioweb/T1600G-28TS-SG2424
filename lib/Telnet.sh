@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  It contains scripts related telnet commands.
-# Author:       Luciano Sampaio Martins de Souza
+# Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 
 runTelnet () {
