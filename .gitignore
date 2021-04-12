@@ -4,6 +4,9 @@
 .AppleDouble
 .LSOverride
 
+# VSCode
+.vscode/*
+
 ### HTTPS Certificates ###
 certificate/*.crt
 certificate/*.key
