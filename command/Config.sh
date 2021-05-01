@@ -164,6 +164,10 @@ sendDHCPExcludedAddress() {
   sendCommand "ip dhcp server excluded-address $1"
 }
 
+sendIpRoute() {
+  sendCommand "ip route $1 $2 $3 $4"
+}
+
 sendEnd() {
   sendCommand "end"
 }

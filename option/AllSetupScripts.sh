@@ -9,6 +9,8 @@ runAllSetupScripts () {
   logInfo "Running All Setup Scripts."
 
   prepareHostMachine
+  setStaticIP
+  setStaticRoutingToDefaultGateway
   enableSSH
   enablePasswordEncryption
   createBotUser

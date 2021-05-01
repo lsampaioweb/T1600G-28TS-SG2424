@@ -10,7 +10,7 @@ setVlans () {
   (
     sendEnable
     sendConfig
-    for file in $VLAN_PATH_OF_VARIABLES ; do
+    for file in $VLAN_PATH_OF_VARIABLES_WITH_FILTER ; do
       # Include file
       . $file
 

@@ -3,7 +3,7 @@
 # Description:  Scripts to setup the Switch Tplink SFP T1600G-28TS-SG2424.
 # Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
-# Usage:        ./Setup.sh
+# Usage:        ./setup.sh
 
 # Dependencies
 . Constants.sh
@@ -44,6 +44,8 @@
 . option/RestoreSettingsFromLatestBackup.sh
 . option/SDMPreference.sh
 . option/SSH.sh
+. option/StaticIP.sh
+. option/StaticRouting.sh
 . option/SystemTimeUsingNTPServer.sh
 . option/Telnet.sh
 . option/User.sh
@@ -51,7 +53,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=26
+amountOfOptions=28
 
 # Methods
 sendBreakLine () {
@@ -67,50 +69,54 @@ runChosenOption () {
     3)
       prepareHostMachine ;;
     4)
-      enableSSH ;;
+      setStaticIP ;;
     5)
-      enablePasswordEncryption ;;
+      setStaticRoutingToDefaultGateway ;;
     6)
-      createBotUser ;;
+      enableSSH ;;
     7)
-      setSystemTimeUsingNTPServer ;;
+      enablePasswordEncryption ;;
     8)
-      enableRemoteLogging ;;
+      createBotUser ;;
     9)
-      enableHTTPS ;;
+      setSystemTimeUsingNTPServer ;;
     10)
-      disableHTTP ;;
+      enableRemoteLogging ;;
     11)
-      setJumboSize ;;
+      enableHTTPS ;;
     12)
-      enableDoSDefend ;;
+      disableHTTP ;;
     13)
-      setDeviceDescription ;;
+      setJumboSize ;;
     14)
-      enableEEE ;;
+      enableDoSDefend ;;
     15)
-      setLACP ;;
+      setDeviceDescription ;;
     16)
-      setVlans ;;
+      enableEEE ;;
     17)
-      setPVID ;;
+      setLACP ;;
     18)
-      setInterfaces ;;
+      setVlans ;;
     19)
-      setDHCP ;;
+      setPVID ;;
     20)
-      disableTelnet ;;
+      setInterfaces ;;
     21)
-      setSDMPreference ;;
+      setDHCP ;;
     22)
-      upgradeFirmware ;;
+      disableTelnet ;;
     23)
-      backup ;;
+      setSDMPreference ;;
     24)
-      reboot ;;
+      upgradeFirmware ;;
     25)
-      resetWithFactorySettings ;;
+      backup ;;
     26)
+      reboot ;;
+    27)
+      resetWithFactorySettings ;;
+    28)
       restoreSettingsFromLatestBackup ;;
   esac
   sendBreakLine
@@ -122,6 +128,8 @@ displayMenu() {
   echo "$((index++)) - Exit."
   echo "$((index++)) - Setup Switch from Zero to Hero!"
   echo "$((index++)) - Prepare Host Machine."
+  echo "$((index++)) - Change from DHCP to static IP."
+  echo "$((index++)) - Set IPv4 Static Routing to Default Gateway."
   echo "$((index++)) - Enable SSH."
   echo "$((index++)) - Enable Password Encryption."
   echo "$((index++)) - Create Bot User."

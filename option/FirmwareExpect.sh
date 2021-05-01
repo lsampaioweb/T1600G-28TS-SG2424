@@ -7,7 +7,7 @@ set DEVICE_IP [lindex $argv 1]
 set ipAddress [lindex $argv 2]
 set filename [lindex $argv 3]
 
-set consoleMsg "T1600G-28TS-01"
+set consoleMsg "T1600G-28TS"
 set lineBreak "\r"
 
 spawn ssh $USER_ADMIN@$DEVICE_IP
