@@ -5,29 +5,31 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 1. Exit.
 2. Setup Switch from Zero to Hero!
 3. Prepare Host Machine.
-4. Enable SSH.
-5. Enable Password Encryption.
-6. Create Bot User.
-7. Set System Time from NTP Server.
-8. Enable Remote Logging.
-9. Enable HTTPS.
-10. Disable HTTP.
-11. Set Jumbo Size.
-12. Enable DoS Defend.
-13. Set Device Description.
-14. Enable EEE.
-15. Set Link Aggregation Control Protocol (LACP).
-16. Set Vlans.
-17. Set PVID.
-18. Set Interfaces.
-19. Set DHCP.
-20. Disable Telnet.
-21. Set SDM Preference.
-22. Upgrade Firmware.
-23. Backup.
-24. Reboot.
-25. Reset with Factory Settings.
-26. Restore Settings from Latest Backup.
+4. Change from DHCP to static IP.
+5. Set IPv4 Static Routing to Default Gateway.
+6. Enable SSH.
+7. Enable Password Encryption.
+8. Create Bot User.
+9. Set System Time from NTP Server.
+10. Enable Remote Logging.
+11. Enable HTTPS.
+12. Disable HTTP.
+13. Set Jumbo Size.
+14. Enable DoS Defend.
+15. Set Device Description.
+16. Enable EEE.
+17. Set Link Aggregation Control Protocol (LACP).
+18. Set Vlans.
+19. Set PVID.
+20. Set Interfaces.
+21. Set DHCP.
+22. Disable Telnet.
+23. Set SDM Preference.
+24. Upgrade Firmware.
+25. Backup.
+26. Reboot.
+27. Reset with Factory Settings.
+28. Restore Settings from Latest Backup.
 
 #### Run:
 1. Run the application on the terminal.
