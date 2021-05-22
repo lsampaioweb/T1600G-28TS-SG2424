@@ -8,7 +8,7 @@ createHTTPSCertificate () {
   logDebug "Creating HTTPS Certificate: $2"
 
   days="365"
-  newkey="rsa:4096"
+  newkey="rsa:2048"
   config=$1
   output=$2
   rsaInput=$3

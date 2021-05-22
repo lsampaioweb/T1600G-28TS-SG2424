@@ -13,7 +13,7 @@ createSSHKeyPair () {
 
   # -N Password
   # -q Quiet
-  ssh-keygen -t rsa -b 4096 -f "$1" -N "" -q
+  ssh-keygen -t rsa -b 2048 -f "$1" -N "" -q
 }
 
 copySSHKeyToTFTPFolder () {
