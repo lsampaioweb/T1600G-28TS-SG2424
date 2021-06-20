@@ -10,10 +10,10 @@ tftpPath="/System/Library/LaunchDaemons/tftp.plist"
 startTFTPServer () {
   logInfo "Starting TFTP Server."
 
-  changeFileMode "-R" 777 "$TFTP_DIRECTORY"
-
   sudo launchctl load -F "$tftpPath" && \
   sudo launchctl start "com.apple.tftpd"
+
+  changeFileMode "-R" 777 "$TFTP_DIRECTORY"
 }
 
 stopTFTPServer () {
