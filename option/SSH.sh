@@ -7,8 +7,6 @@
 enableSSH () {
   logInfo "Enabling SSH."
 
-  startTFTPServer
-
   if ( ! fileExists $SSH_PUBLIC_KEY_PATH_AND_FULLNAME ); then
     createSSHKeyPair $SSH_PUBLIC_KEY_PATH_AND_NAME
   fi
@@ -20,6 +18,8 @@ enableSSH () {
   else
     appendSSHConfigInfo $SSH_CONFIG_FILE_PATH_AND_FULLNAME
   fi
+
+  startTFTPServer
 
   (
     sendCommand "$USER_ADMIN"

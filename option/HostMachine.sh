@@ -11,7 +11,6 @@ prepareHostMachine () {
   installPackage "telnet"
 
   createDirectory "backup"
-  createDirectory "certificate"
   createDirectory "firmware"
 
   logInfo "Finished."

@@ -25,9 +25,9 @@ stopTFTPServer () {
 }
 
 copyFileToTFTPFolder () {
-  logDebug "Copying file: $1 to $TFTP_DIRECTORY"
+  logDebug "Copying file: $1 to ${TFTP_DIRECTORY}${2}"
 
-  sudo cp -p "$1" "$TFTP_DIRECTORY"
+  sudo cp -p "$1" "${TFTP_DIRECTORY}${2}"
 }
 
 copyFileFromTFTPFolder () {

@@ -34,11 +34,11 @@ sendEnableHTTPS() {
 }
 
 sendDownloadHTTPSCertificate() {
-  sendCommand "ip http secure-server download certificate $HTTPS_CERTIFICATE ip-address $1"
+  sendCommand "ip http secure-server download certificate $HTTPS_CERTIFICATE_SHORT_NAME ip-address $1"
 }
 
 sendDownloadHTTPSKey() {
-  sendCommand "ip http secure-server download key $HTTPS_CERTIFICATE_PEM ip-address $1"
+  sendCommand "ip http secure-server download key $HTTPS_CERTIFICATE_KEY_SHORT_NAME ip-address $1"
 }
 
 sendDisableHTTP() {
