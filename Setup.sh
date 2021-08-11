@@ -35,6 +35,7 @@
 . option/HTTP.sh
 . option/HTTPS.sh
 . option/Interface.sh
+. option/IPRouting.sh
 . option/JumboSize.sh
 . option/LACP.sh
 . option/PasswordEncryption.sh
@@ -53,7 +54,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=28
+amountOfOptions=29
 
 # Methods
 sendBreakLine () {
@@ -101,22 +102,24 @@ runChosenOption () {
     19)
       setPVID ;;
     20)
-      setInterfaces ;;
+      setIPRouting ;;
     21)
-      setDHCP ;;
+      setInterfaces ;;
     22)
-      disableTelnet ;;
+      setDHCP ;;
     23)
-      setSDMPreference ;;
+      disableTelnet ;;
     24)
-      upgradeFirmware ;;
+      setSDMPreference ;;
     25)
-      backup ;;
+      upgradeFirmware ;;
     26)
-      reboot ;;
+      backup ;;
     27)
-      resetWithFactorySettings ;;
+      reboot ;;
     28)
+      resetWithFactorySettings ;;
+    29)
       restoreSettingsFromLatestBackup ;;
   esac
   sendBreakLine
@@ -144,6 +147,7 @@ displayMenu() {
   echo "$((index++)) - Set Link Aggregation Control Protocol."
   echo "$((index++)) - Set Vlans."
   echo "$((index++)) - Set PVID."
+  echo "$((index++)) - Set IP Routing."
   echo "$((index++)) - Set Interfaces."
   echo "$((index++)) - Set DHCP."
   echo "$((index++)) - Disable Telnet."

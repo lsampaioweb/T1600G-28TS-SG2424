@@ -132,6 +132,14 @@ sendInterfaceVlan() {
   sendCommand "interface vlan $1"
 }
 
+sendIPv4Routing() {
+  sendCommand "ip routing"
+}
+
+sendIPv6Routing() {
+  sendCommand "ipv6 routing"
+}
+
 sendDescription() {
   sendCommand "description $1"
 }
