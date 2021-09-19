@@ -19,7 +19,7 @@ runAllSetupScripts () {
   enableHTTPS
   disableHTTP
   setJumboSize
-  enableDoSDefend
+  # enableDoSDefend
   setDeviceDescription
   enableEEE
   setLACP

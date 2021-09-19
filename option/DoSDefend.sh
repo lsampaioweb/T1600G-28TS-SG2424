@@ -5,18 +5,21 @@
 # Date:         29-Dec-2020
 
 enableDoSDefend () {
-  logInfo "Enabling DoS Defend."
+  # As the option was dropping NFS packages, I had to disable the DOS defend function. 
+  # The problematic rule was "port-less-1024", but I don't know if other rules are blocking other things.
 
-  (
-    sendEnable
-    sendConfig
-    sendEnableDoSDefend
-    sendSetDoSDefendTypes "land" "scan-synfin" "xma-scan" "null-scan" "port-less-1024" "blat" "ping-flood" "syn-flood" "win-nuke" "ping-of-death" "smurf"
-    sendEnd
-    sendSaveSettings
-    sendExit
-    sendExit
-  ) | runSSH $USER_BOT@$DEVICE_IP
+  # logInfo "Enabling DoS Defend."
 
-  logInfo "Finished."
+  # (
+  #   sendEnable
+  #   sendConfig
+  #   sendEnableDoSDefend
+  #   sendSetDoSDefendTypes "land" "scan-synfin" "xma-scan" "null-scan" "port-less-1024" "blat" "ping-flood" "syn-flood" "win-nuke" "ping-of-death" "smurf"
+  #   sendEnd
+  #   sendSaveSettings
+  #   sendExit
+  #   sendExit
+  # ) | runSSH $USER_BOT@$DEVICE_IP
+
+  # logInfo "Finished."
 }
