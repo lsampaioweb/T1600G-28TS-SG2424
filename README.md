@@ -34,7 +34,7 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 #### Run:
 1. Run the application on the terminal.
 ```bash
-    ./setup.sh
+    ./Setup.sh
 ```    
 
 #### Credentials:
