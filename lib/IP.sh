@@ -5,5 +5,5 @@
 # Date:         20-Dec-2020
 
 getIpAddress() {
-  ipconfig getifaddr en0
+  hostname -I
 }

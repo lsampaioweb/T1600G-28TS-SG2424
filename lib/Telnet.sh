@@ -5,5 +5,7 @@
 # Date:         20-Dec-2020
 
 runTelnet () {
-  ( xargs -I {} ) | telnet "$1" #>> out.txt
+  # d "\n" -> Delimiter is a newline.
+  # -n 1   -> One element per line.
+  xargs -d "\n" -n 1 | telnet "$1" #>> out.txt
 }

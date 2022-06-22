@@ -131,7 +131,7 @@ displayMenu() {
   echo "$((index++)) - Exit."
   echo "$((index++)) - Setup Switch from Zero to Hero!"
   echo "$((index++)) - Prepare Host Machine."
-  echo "$((index++)) - Change from DHCP to static IP."
+  echo "$((index++)) - Set static IP."
   echo "$((index++)) - Set IPv4 Static Routing to Default Gateway."
   echo "$((index++)) - Enable SSH."
   echo "$((index++)) - Enable Password Encryption."

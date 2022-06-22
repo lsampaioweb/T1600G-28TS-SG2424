@@ -12,7 +12,7 @@ setStaticIP () {
 
   (
     sendCommand "$USER_ADMIN"
-    sendCommand "$(getAdminPasswordFromKeyChain)"
+    sendCommand "$(getAdminPasswordFromVault)"
     sendEnable
     sendConfig
 

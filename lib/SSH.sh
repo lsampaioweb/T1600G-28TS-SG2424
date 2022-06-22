@@ -5,7 +5,10 @@
 # Date:         20-Dec-2020
 
 runSSH () {
-  ( xargs -I {} ) | ssh -T "$1" #> out.txt
+  #( xargs -I {} ) | ssh -T "$1" #> out.txt
+  # d "\n" -> Delimiter is a newline.
+  # -n 1   -> One element per line.  
+  xargs -d "\n" -n 1 | ssh -T "$1" #>> out.txt
 }
 
 createSSHKeyPair () {
@@ -38,12 +41,11 @@ appendSSHConfigInfo () {
     (
       echo "$textToSearch"
       echo "HostName $DEVICE_IP"
-      echo "HostKeyAlgorithms +ssh-dss"
-      echo "KexAlgorithms +diffie-hellman-group1-sha1"
-      echo "Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc"
-      echo "UseKeychain yes"
-      echo "AddKeysToAgent yes"
-      echo "IdentityFile $SSH_PUBLIC_KEY_PATH_AND_NAME"
-    ) | xargs -I {} >> $file
+      echo -e "\tHostKeyAlgorithms +ssh-dss"
+      echo -e "\tKexAlgorithms +diffie-hellman-group1-sha1"
+      echo -e "\tCiphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc"
+      echo -e "\tAddKeysToAgent yes"
+      echo -e "\tIdentityFile $SSH_PUBLIC_KEY_PATH_AND_NAME"
+    ) | xargs -d "\n" -n 1 >> $file
   fi
 }

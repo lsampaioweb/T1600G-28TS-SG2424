@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Description:  It retrieves or saves passwords from and to the keychain.
+# Description:  It retrieves or saves passwords from and to the vault.
 # Author:       Luciano Sampaio 
 # Date:         20-Dec-2020
 
-getAdminPasswordFromKeyChain() {
-  getPassword "$USER" "$USER_ADMIN_KEYCHAIN"
+getAdminPasswordFromVault() {
+  getPassword "$USER_ADMIN_PASSWORD_KEY"
 }
 
 getPassword() {
-  security find-generic-password -a "$1" -s "$2" -w
+  secret-tool lookup password "$1"
 }
 
 userHasProvidedArguments () {
@@ -33,9 +33,9 @@ getRandomPassword() {
 }
 
 savePassword() {
-  security add-generic-password -U -a "$1" -s "$2" -w "$3"
+  echo -n "$2" | secret-tool store --label="$1" password "$1"
 }
 
 saveBotPasswordInKeyChain() {
-  savePassword "$USER" "$USER_BOT" "$1"
+  savePassword "$USER_BOT" "$1"
 }
