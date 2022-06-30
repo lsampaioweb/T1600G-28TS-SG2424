@@ -5,7 +5,7 @@
 # Date:         20-Dec-2020
 
 getCurrentFileMode() {
-  stat -f %A $1
+  stat -c "%a" $1
 }
 
 changeFileMode() {

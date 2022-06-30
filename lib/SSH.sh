@@ -40,12 +40,15 @@ appendSSHConfigInfo () {
 
     (
       echo "$textToSearch"
-      echo "HostName $DEVICE_IP"
+      echo "Host $DEVICE_IP"
+      echo -e "\tHostName $DEVICE_IP"
       echo -e "\tHostKeyAlgorithms +ssh-dss"
+      echo -e "\tPubkeyAcceptedAlgorithms +ssh-rsa"
       echo -e "\tKexAlgorithms +diffie-hellman-group1-sha1"
       echo -e "\tCiphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc"
       echo -e "\tAddKeysToAgent yes"
       echo -e "\tIdentityFile $SSH_PUBLIC_KEY_PATH_AND_NAME"
+      echo -e "\tIdentitiesOnly yes"
     ) | xargs -d "\n" -n 1 >> $file
   fi
 }

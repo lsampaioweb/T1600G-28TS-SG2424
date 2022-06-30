@@ -28,7 +28,10 @@ SIZE_OF_JUMBO_FRAME=9216
 
 SDM_PREFERENCE="enterpriseV4"
 
-TFTP_DIRECTORY="/private/tftpboot/"
+TFTP_USER_GROUP="tftp:tftp"
+TFTP_DIRECTORY="/srv/tftp/"
+TFTP_CONFIG_DIRECTORY="/etc/default/tftpd-hpa"
+TFTP_SERVICE_NAME="tftpd-hpa"
 
 SSH_VERSION="v2"
 SSH_PUBLIC_KEY_PATH="$HOME/.ssh/"

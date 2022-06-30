@@ -15,10 +15,12 @@
 . lib/Directory.sh
 . lib/File.sh
 . lib/FileMode.sh
+. lib/FileOwner.sh
 . lib/Https.sh
 . lib/IP.sh
 . lib/Log.sh
 . lib/PackageManager.sh
+. lib/Service.sh
 . lib/SSH.sh
 . lib/String.sh
 . lib/Telnet.sh

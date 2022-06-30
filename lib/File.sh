@@ -17,6 +17,7 @@ textExistsInFile () {
 
   while IFS= read -r line
   do
+    logDebug $line " - " $textToSearch
     if [ "$line" == "$textToSearch" ]; then
       return 0 # True
     fi
