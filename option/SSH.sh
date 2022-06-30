@@ -34,6 +34,8 @@ enableSSH () {
     sendExit
   ) | runTelnet $DEVICE_IP
 
+  deleteFileFromTFTPFolder "$SSH_PUBLIC_KEY_FULLNAME"
+
   stopTFTPServer
 
   logInfo "Finished."
