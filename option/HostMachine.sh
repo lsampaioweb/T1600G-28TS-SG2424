@@ -9,6 +9,7 @@ prepareHostMachine () {
 
   # Install telnet on the host machine because Macs do not come with telnet installed by default.
   installPackage "telnet"
+  installPackage "expect"
   installTFTPServer
 
   createDirectory "backup"
