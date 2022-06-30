@@ -19,7 +19,7 @@ createBotUser () {
     sendExit
   ) | runSSH $USER_ADMIN@$DEVICE_IP
 
-  saveBotPasswordInKeyChain "$botPassword"
+  saveBotPasswordInSecretManager "$botPassword"
 
   logInfo "Finished."
 }

@@ -36,6 +36,6 @@ savePassword() {
   echo -n "$2" | secret-tool store --label="$1" password "$1"
 }
 
-saveBotPasswordInKeyChain() {
+saveBotPasswordInSecretManager() {
   savePassword "$USER_BOT" "$1"
 }
