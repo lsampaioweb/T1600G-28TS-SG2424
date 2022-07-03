@@ -12,7 +12,9 @@ setStaticRoutingToDefaultGateway () {
     sendCommand "$(getAdminPasswordFromVault)"
     sendEnable
     sendConfig
+
     sendIpRoute "$STATIC_ROUTE_DESTINATION_IP" "$STATIC_ROUTE_SUBNET_MASK" "$STATIC_ROUTE_DEFAULT_GATEWAY_IP" "$STATIC_ROUTE_DEFAULT_GATEWAY_DISTANCE"
+    
     sendEnd
     sendSaveSettings
     sendExit

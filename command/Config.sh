@@ -136,10 +136,6 @@ sendIPv4Routing() {
   sendCommand "ip routing"
 }
 
-sendIPv6Routing() {
-  sendCommand "ipv6 routing"
-}
-
 sendDescription() {
   sendCommand "description $1"
 }

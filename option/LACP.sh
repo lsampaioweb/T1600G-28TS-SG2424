@@ -18,6 +18,7 @@ setLACPGroups () {
   (
     sendEnable
     sendConfig
+
     for file in $LACP_PATH_OF_GROUPS_VARIABLES ; do
       # Include file
       . $file
@@ -27,11 +28,11 @@ setLACPGroups () {
       sendLACPPortPriority "$PORT_PRIORITY"
       sendExit
     done
+    
     sendEnd
     sendSaveSettings
     sendExit
     sendExit
-    
   ) | runSSH $USER_BOT@$DEVICE_IP
 }
 
