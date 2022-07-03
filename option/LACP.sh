@@ -29,6 +29,9 @@ setLACPGroups () {
     done
     sendEnd
     sendSaveSettings
+    sendExit
+    sendExit
+    
   ) | runSSH $USER_BOT@$DEVICE_IP
 }
 
