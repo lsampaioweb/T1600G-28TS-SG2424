@@ -5,26 +5,26 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 1. Exit.
 2. Setup Switch from Zero to Hero!
 3. Prepare Host Machine.
-4. Change from DHCP to static IP.
-5. Set IPv4 Static Routing to Default Gateway.
-6. Enable SSH.
-7. Enable Password Encryption.
-8. Create Bot User.
-9. Set System Time from NTP Server.
-10. Enable Remote Logging.
-11. Enable HTTPS.
-12. Disable HTTP.
-13. Set Jumbo Size.
-14. Enable DoS Defend.
-15. Set Device Description.
-16. Enable EEE.
-17. Set Link Aggregation Control Protocol (LACP).
-18. Set Vlans.
-19. Set PVID.
-20. Set Interfaces.
-21. Set DHCP.
+4. Set static IP
+5. Enable SSH.
+6. Enable Password Encryption.
+7. Create Bot User.
+8. Set Link Aggregation Control Protocol (LACP).
+9. Set Vlans.
+10. Set PVID.
+11. Enable IPV4 routing.
+12. Set Interfaces.
+13. Set IPv4 Static Routing to Default Gateway.
+14. Set System Time from NTP Server.
+15. Enable HTTPS.
+16. Disable HTTP.
+17. Set Jumbo Size.
+18. Enable DoS Defend.
+19. Set Device Description.
+20. Set SDM Preference.
+21. Enable Remote Logging.
 22. Disable Telnet.
-23. Set SDM Preference.
+23. Enable EEE.
 24. Upgrade Firmware.
 25. Backup.
 26. Reboot.
@@ -38,14 +38,14 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 ```    
 
 #### Credentials:
-1. Create a strong password for the admin user and store it in the **MacOSX** Keychain.
+1. Create a strong password for the admin user and store it in the secret manager.
 ```bash
-    security add-generic-password -U -a $USER -s "switch_user_admin" -j "Password for the admin user in the TP-Link Switch." -w $(openssl rand -base64 32 | colrm 33)
+    secret-tool store --label="switch-user-admin" password "$(openssl rand -base64 32 | colrm 33)"
 ```    
 
 2. Retrieve the admin's password.
 ```bash
-    security find-generic-password -a $USER -s "switch_user_admin" -w | tr -d '\n' | pbcopy
+    secret-tool lookup password "switch-user-admin"
 ```
 
 #### Contact-Info:

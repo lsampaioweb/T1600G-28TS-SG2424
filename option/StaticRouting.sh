@@ -8,8 +8,6 @@ setStaticRoutingToDefaultGateway () {
   logInfo "Setting the Static Routing to the Default Gateway."
 
   (
-    sendCommand "$USER_ADMIN"
-    sendCommand "$(getAdminPasswordFromVault)"
     sendEnable
     sendConfig
 
@@ -19,7 +17,7 @@ setStaticRoutingToDefaultGateway () {
     sendSaveSettings
     sendExit
     sendExit
-  ) | runTelnet "$DEVICE_IP"
+  ) | runSSH $USER_BOT@$DEVICE_IP
 
   logInfo "Finished."
 }

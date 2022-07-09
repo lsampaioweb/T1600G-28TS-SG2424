@@ -144,30 +144,6 @@ sendIpAddress() {
   sendCommand "ip address $1 $2"
 }
 
-sendEnableDHCP() {
-  sendCommand "service dhcp server"
-}
-
-sendDHCPPoolName() {
-  sendCommand "ip dhcp server pool $1"
-}
-
-sendDHCPPoolIpAndNetwork() {
-  sendCommand "network $1 $2"
-}
-
-sendDHCPPoolGateway() {
-  sendCommand "default-gateway $1"
-}
-
-sendDHCPPoolDNS() {
-  sendCommand "dns-server $1"
-}
-
-sendDHCPExcludedAddress() {
-  sendCommand "ip dhcp server excluded-address $1"
-}
-
 sendIpRoute() {
   sendCommand "ip route $1 $2 $3 $4"
 }

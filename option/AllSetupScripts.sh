@@ -10,31 +10,31 @@ runAllSetupScripts () {
 
   prepareHostMachine
   setStaticIP
-  setStaticRoutingToDefaultGateway
   enableSSH
   enablePasswordEncryption
   createBotUser
-  setSystemTimeUsingNTPServer
-  enableRemoteLogging
-  enableHTTPS
-  disableHTTP
-  setJumboSize
-  # enableDoSDefend
-  setDeviceDescription
-  enableEEE
   setLACP
   setVlans
   setPVID
+  setIPRouting
   setInterfaces
-  setDHCP
-  disableTelnet
+  setStaticRoutingToDefaultGateway
+  setSystemTimeUsingNTPServer
+  enableHTTPS
+  disableHTTP
+  setJumboSize
+  enableDoSDefend
+  setDeviceDescription
   setSDMPreference
+  enableRemoteLogging
+  disableTelnet
+  enableEEE
 
   # The final step is to create a backup and save it in the control machine.
   backup
 
   # Some changes will only take affect after the reboot.
-  reboot
+  # reboot
 
   logInfo "Finished."
 }

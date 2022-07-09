@@ -28,7 +28,6 @@
 . option/AllSetupScripts.sh
 . option/Backup.sh
 . option/DeviceDescription.sh
-. option/DHCP.sh
 . option/DoSDefend.sh
 . option/EEE.sh
 . option/FactorySettings.sh
@@ -56,7 +55,7 @@
 
 # Variables
 chosenOption=-1
-amountOfOptions=29
+amountOfOptions=28
 
 # Methods
 sendBreakLine () {
@@ -74,54 +73,52 @@ runChosenOption () {
     4)
       setStaticIP ;;
     5)
-      setStaticRoutingToDefaultGateway ;;
-    6)
       enableSSH ;;
-    7)
+    6)
       enablePasswordEncryption ;;
-    8)
+    7)
       createBotUser ;;
-    9)
-      setSystemTimeUsingNTPServer ;;
-    10)
-      enableRemoteLogging ;;
-    11)
-      enableHTTPS ;;
-    12)
-      disableHTTP ;;
-    13)
-      setJumboSize ;;
-    14)
-      enableDoSDefend ;;
-    15)
-      setDeviceDescription ;;
-    16)
-      enableEEE ;;
-    17)
+    8)
       setLACP ;;
-    18)
+    9)
       setVlans ;;
-    19)
+    10)
       setPVID ;;
-    20)
+    11)
       setIPRouting ;;
-    21)
+    12)
       setInterfaces ;;
-    22)
-      setDHCP ;;
-    23)
-      disableTelnet ;;
-    24)
+    13)
+      setStaticRoutingToDefaultGateway ;;      
+    14)
+      setSystemTimeUsingNTPServer ;;
+    15)
+      enableHTTPS ;;
+    16)
+      disableHTTP ;;
+    17)
+      setJumboSize ;;
+    18)
+      enableDoSDefend ;;
+    19)
+      setDeviceDescription ;;
+    20)
       setSDMPreference ;;
-    25)
+    21)
+      enableRemoteLogging ;;
+    22)
+      disableTelnet ;;
+    23)
+      enableEEE ;;
+    24)
       upgradeFirmware ;;
-    26)
+    25)
       backup ;;
-    27)
+    26)
       reboot ;;
-    28)
+    27)
       resetWithFactorySettings ;;
-    29)
+    28)
       restoreSettingsFromLatestBackup ;;
   esac
   sendBreakLine
@@ -134,26 +131,25 @@ displayMenu() {
   echo "$((index++)) - Setup Switch from Zero to Hero!"
   echo "$((index++)) - Prepare Host Machine."
   echo "$((index++)) - Set static IP."
-  echo "$((index++)) - Set IPv4 Static Routing to Default Gateway."
   echo "$((index++)) - Enable SSH."
   echo "$((index++)) - Enable Password Encryption."
   echo "$((index++)) - Create Bot User."
-  echo "$((index++)) - Set System Time from NTP Server."
-  echo "$((index++)) - Enable Remote Logging."
-  echo "$((index++)) - Enable HTTPS."
-  echo "$((index++)) - Disable HTTP."
-  echo "$((index++)) - Set Jumbo Size."
-  echo "$((index++)) - Enable DoS Defend."
-  echo "$((index++)) - Set Device Description."
-  echo "$((index++)) - Enable EEE."
   echo "$((index++)) - Set Link Aggregation Control Protocol."
   echo "$((index++)) - Set Vlans."
   echo "$((index++)) - Set PVID."
   echo "$((index++)) - Set IP Routing."
   echo "$((index++)) - Set Interfaces."
-  echo "$((index++)) - Set DHCP."
-  echo "$((index++)) - Disable Telnet."
+  echo "$((index++)) - Set IPv4 Static Routing to Default Gateway."
+  echo "$((index++)) - Set System Time from NTP Server."
+  echo "$((index++)) - Enable HTTPS."
+  echo "$((index++)) - Disable HTTP."
+  echo "$((index++)) - Set Jumbo Size."
+  echo "$((index++)) - Enable DoS Defend."
+  echo "$((index++)) - Set Device Description."
   echo "$((index++)) - Set SDM Preference."
+  echo "$((index++)) - Enable Remote Logging."
+  echo "$((index++)) - Disable Telnet."
+  echo "$((index++)) - Enable EEE."
   echo "$((index++)) - Upgrade Firmware."
   echo "$((index++)) - Backup."
   echo "$((index++)) - Reboot."
