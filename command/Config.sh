@@ -120,8 +120,8 @@ sendLACPLoadBalancingAlgorithm() {
   sendCommand "port-channel load-balance $1"
 }
 
-sendLACPGroupModePassive() {
-  sendCommand "channel-group $1 mode passive"
+sendLACPGroupMode() {
+  sendCommand "channel-group $1 mode $2"
 }
 
 sendLACPPortPriority() {

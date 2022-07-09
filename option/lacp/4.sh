@@ -1,3 +1,4 @@
 PORTS="1/0/13-15"
 GROUP_ID="4"
 PORT_PRIORITY="0"
+MODE="active"
