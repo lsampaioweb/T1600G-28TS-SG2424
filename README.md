@@ -40,7 +40,7 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 #### Credentials:
 1. Create a strong password for the admin user and store it in the secret manager.
 ```bash
-    secret-tool store --label="switch-user-admin" password "$(openssl rand -base64 32 | colrm 33)"
+    secret-tool store --label="switch-user-admin" password
 ```    
 
 2. Retrieve the admin's password.
