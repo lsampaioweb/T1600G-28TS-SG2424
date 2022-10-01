@@ -54,8 +54,17 @@
 . option/Vlan.sh
 
 # Variables
-chosenOption=-1
 amountOfOptions=28
+
+userHasProvidedArguments () {
+  # 0 True and 1 False
+  [ $# -ge 1 ] && return 0 || return 1
+}
+if (userHasProvidedArguments $*) ; then
+  chosenOption=$1
+else
+  chosenOption=0
+fi
 
 # Methods
 sendBreakLine () {
@@ -163,8 +172,8 @@ userHasChosenAValidOption() {
 }
 
 getChosenOption () {
-  chosenOption=-1
-  amountOfOptions=$1
+  chosenOption=$1
+  amountOfOptions=$2
 
   until userHasChosenAValidOption $chosenOption $amountOfOptions
   do
@@ -181,8 +190,8 @@ userWantsToExit() {
 }
 
 until userWantsToExit $chosenOption
-do
-  getChosenOption $amountOfOptions
+do  
+  getChosenOption $chosenOption $amountOfOptions
   chosenOption=$?
 
   runChosenOption $chosenOption

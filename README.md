@@ -31,16 +31,10 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 27. Reset with Factory Settings.
 28. Restore Settings from Latest Backup.
 
-#### Run:
-1. Run the application on the terminal.
-```bash
-    ./Setup.sh
-```    
-
 #### Credentials:
-1. Create a strong password for the admin user and store it in the secret manager.
+1. Create a strong password for the admin user and store it in the secret manager. After you hit enter, a password will be asked.
 ```bash
-    secret-tool store --label="switch-user-admin" password
+    secret-tool store --label="switch-user-admin" password "switch-user-admin"
 ```    
 
 2. Retrieve the admin's password.
@@ -57,4 +51,12 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 2. Decode your email from base64 to use it as the contact-info.
 ```bash
     echo "eW91ci1lbWFpbEBzb21ldGhpbmcuY29tCg==" | base64 --decode
+```
+
+#### Run:
+1. Run the application on the terminal.
+```bash
+    ./Setup.sh
+    or 
+    ./Setup.sh 2
 ```
