@@ -54,7 +54,8 @@
 . option/Vlan.sh
 
 # Variables
-amountOfOptions=28
+exitOption=0
+amountOfOptions=20
 
 userHasProvidedArguments () {
   # 0 True and 1 False
@@ -63,7 +64,7 @@ userHasProvidedArguments () {
 if (userHasProvidedArguments $*) ; then
   chosenOption=$1
 else
-  chosenOption=0
+  chosenOption=-1
 fi
 
 # Methods
@@ -74,67 +75,67 @@ sendBreakLine () {
 runChosenOption () {
   sendBreakLine
   case $1 in
-   #1) is the option to exit the application. There is nothing to do here.
-    2)
+   #0) is the option to exit the application. There is nothing to do here.
+    1)
       runAllSetupScripts ;;
-    3)
+    2)
       prepareHostMachine ;;
-    4)
+    3)
       setStaticIP ;;
-    5)
+    4)
       enableSSH ;;
-    6)
+    5)
       enablePasswordEncryption ;;
-    7)
+    6)
       createBotUser ;;
-    8)
+    7)
       setLACP ;;
-    9)
+    8)
       setVlans ;;
-    10)
+    9)
       setPVID ;;
-    11)
+    10)
       setIPRouting ;;
-    12)
+    11)
       setInterfaces ;;
-    13)
+    12)
       setStaticRoutingToDefaultGateway ;;      
-    14)
+    13)
       setSystemTimeUsingNTPServer ;;
-    15)
+    14)
       enableHTTPS ;;
-    16)
+    15)
       disableHTTP ;;
-    17)
+    16)
       setJumboSize ;;
-    18)
+    17)
       enableDoSDefend ;;
-    19)
+    18)
       setDeviceDescription ;;
-    20)
+    19)
       setSDMPreference ;;
-    21)
+    20)
       enableRemoteLogging ;;
-    22)
+    21)
       disableTelnet ;;
-    23)
+    22)
       enableEEE ;;
-    24)
+    23)
       upgradeFirmware ;;
-    25)
+    24)
       backup ;;
-    26)
+    25)
       reboot ;;
-    27)
+    26)
       resetWithFactorySettings ;;
-    28)
+    27)
       restoreSettingsFromLatestBackup ;;
   esac
   sendBreakLine
 }
 
 displayMenu() {
-  index=1
+  index=0
   echo "Type the number of the option you want to execute. [$index-$1]"
   echo "$((index++)) - Exit."
   echo "$((index++)) - Setup Switch from Zero to Hero!"
@@ -168,7 +169,7 @@ displayMenu() {
 
 userHasChosenAValidOption() {
   # 0 True and 1 False
-  [ $1 -ge 1 ] && [ $1 -le $2 ] && return 0 || return 1
+  [ $1 -ge 0 ] && [ $1 -le $2 ] && return 0 || return 1
 }
 
 getChosenOption () {
@@ -186,7 +187,7 @@ getChosenOption () {
 
 userWantsToExit() {
   # 0 True and 1 False
-  [ $1 -eq 1 ] && return 0 || return 1
+  [ $1 -eq $exitOption ] && return 0 || return 1
 }
 
 until userWantsToExit $chosenOption
