@@ -55,7 +55,7 @@
 
 # Variables
 exitOption=0
-amountOfOptions=20
+amountOfOptions=27
 
 userHasProvidedArguments () {
   # 0 True and 1 False
@@ -196,4 +196,6 @@ do
   chosenOption=$?
 
   runChosenOption $chosenOption
+
+  chosenOption=0
 done

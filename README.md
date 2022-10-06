@@ -2,34 +2,34 @@
 Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 
 #### Options you can execute:
-1. Exit.
-2. Setup Switch from Zero to Hero!
-3. Prepare Host Machine.
-4. Set static IP
-5. Enable SSH.
-6. Enable Password Encryption.
-7. Create Bot User.
-8. Set Link Aggregation Control Protocol (LACP).
-9. Set Vlans.
-10. Set PVID.
-11. Enable IPV4 routing.
-12. Set Interfaces.
-13. Set IPv4 Static Routing to Default Gateway.
-14. Set System Time from NTP Server.
-15. Enable HTTPS.
-16. Disable HTTP.
-17. Set Jumbo Size.
-18. Enable DoS Defend.
-19. Set Device Description.
-20. Set SDM Preference.
-21. Enable Remote Logging.
-22. Disable Telnet.
-23. Enable EEE.
-24. Upgrade Firmware.
-25. Backup.
-26. Reboot.
-27. Reset with Factory Settings.
-28. Restore Settings from Latest Backup.
+0. Exit.
+1. Setup Switch from Zero to Hero!
+2. Prepare Host Machine.
+3. Set static IP
+4. Enable SSH.
+5. Enable Password Encryption.
+6. Create Bot User.
+7. Set Link Aggregation Control Protocol (LACP).
+8. Set Vlans.
+9. Set PVID.
+10. Enable IPV4 routing.
+11. Set Interfaces.
+12. Set IPv4 Static Routing to Default Gateway.
+13. Set System Time from NTP Server.
+14. Enable HTTPS.
+15. Disable HTTP.
+16. Set Jumbo Size.
+17. Enable DoS Defend.
+18. Set Device Description.
+19. Set SDM Preference.
+20. Enable Remote Logging.
+21. Disable Telnet.
+22. Enable EEE.
+23. Upgrade Firmware.
+24. Backup.
+25. Reboot.
+26. Reset with Factory Settings.
+27. Restore Settings from Latest Backup.
 
 #### Credentials:
 1. Create a strong password for the admin user and store it in the secret manager. After you hit enter, a password will be asked.
@@ -53,10 +53,17 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
     echo "eW91ci1lbWFpbEBzb21ldGhpbmcuY29tCg==" | base64 --decode
 ```
 
+#### Add ip in the hosts file:
+1. Add the switch's ip in the hosts file so we can connect using its name and not its ip.
+```bash
+    sudo nano /etc/hosts
+    192.168.0.3 switch.homelab
+```
+
 #### Run:
 1. Run the application on the terminal.
 ```bash
     ./Setup.sh
     or 
-    ./Setup.sh 2
+    ./Setup.sh <option number>
 ```

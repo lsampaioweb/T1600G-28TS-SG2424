@@ -1,4 +1,4 @@
-PORTS="1/0/17-19"
+PORTS="1/0/15-18"
 GROUP_ID="5"
 PORT_PRIORITY="0"
 MODE="active"
