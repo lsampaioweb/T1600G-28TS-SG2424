@@ -1,5 +1,5 @@
-VLAN_ID="2"
-VLAN_NAME="Lan-Management"
+VLAN_ID="5"
+VLAN_NAME="Load-Balancing"
 
 #VLAN
 UNTAGGED_PORTS=""
@@ -12,5 +12,5 @@ PVID_PORTS=""
 PVID_LAG_PORTS=""
 
 #Interface
-IP_ADDRESS="10.0.2.4"
-SUBNET_MASK="255.255.255.240"
+IP_ADDRESS=""
+SUBNET_MASK=""
