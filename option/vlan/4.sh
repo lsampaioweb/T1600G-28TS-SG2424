@@ -1,5 +1,5 @@
 VLAN_ID="4"
-VLAN_NAME="Vms-Infra"
+VLAN_NAME="Infra"
 
 #VLAN
 UNTAGGED_PORTS=""

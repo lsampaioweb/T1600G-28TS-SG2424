@@ -1,5 +1,5 @@
 VLAN_ID="5"
-VLAN_NAME="Load-Balancing"
+VLAN_NAME="Backup"
 
 #VLAN
 UNTAGGED_PORTS=""
