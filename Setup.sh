@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description:  Scripts to setup the Switch Tplink SFP T1600G-28TS-SG2424.
-# Author:       Luciano Sampaio 
+# Author:       Luciano Sampaio
 # Date:         20-Dec-2020
 # Usage:        ./setup.sh
 
@@ -99,7 +99,7 @@ runChosenOption () {
     11)
       setInterfaces ;;
     12)
-      setStaticRoutingToDefaultGateway ;;      
+      setStaticRoutingToDefaultGateway ;;
     13)
       setSystemTimeUsingNTPServer ;;
     14)
@@ -191,7 +191,7 @@ userWantsToExit() {
 }
 
 until userWantsToExit $chosenOption
-do  
+do
   getChosenOption $chosenOption $amountOfOptions
   chosenOption=$?
 
