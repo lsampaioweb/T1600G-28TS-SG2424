@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Description:  It contains all common values that are used by several scripts.
-# Author:       Luciano Sampaio 
+# Author:       Luciano Sampaio
 # Date:         20-Dec-2020
 
 DEBUG=false
-DEVICE_IP="switch.homelab"
+DEVICE_IP="switch.lan.homelab"
 DEVICE_NAME="T1600G-28TS"
 DEVICE_LOCATION="DC-BR-SE-AJU-SWITCH-01"
 DEVICE_CONTACT_INFO="bHNhbXBhaW93ZWJAZ21haWwuY29tCg=="
@@ -41,9 +41,9 @@ NTP_UPDATE_RATE="12"
 IP_REMOTE_LOGGING_SERVER="10.0.2.5"
 LOG_LEVEL=6 #Info
 
-HTTPS_FILES_PATH="/opt/certificates/switch.homelab/"
-HTTPS_CERTIFICATE="switch.homelab.crt"
-HTTPS_CERTIFICATE_KEY="switch.homelab.key"
+HTTPS_FILES_PATH="/opt/certificates/switch.lan.homelab/"
+HTTPS_CERTIFICATE="switch.lan.homelab.crt"
+HTTPS_CERTIFICATE_KEY="switch.lan.homelab.key"
 HTTPS_CERTIFICATE_PATH_AND_NAME=${HTTPS_FILES_PATH}${HTTPS_CERTIFICATE}
 HTTPS_CERTIFICATE_KEY_PATH_AND_NAME=${HTTPS_FILES_PATH}${HTTPS_CERTIFICATE_KEY}
 HTTPS_CERTIFICATE_SHORT_NAME="certificate.crt"

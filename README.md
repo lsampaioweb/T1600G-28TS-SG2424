@@ -35,7 +35,7 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 1. Create a strong password for the admin user and store it in the secret manager. After you hit enter, a password will be asked.
 ```bash
     secret-tool store --label="switch-user-admin" password "switch-user-admin"
-```    
+```
 
 2. Retrieve the admin's password.
 ```bash
@@ -57,13 +57,13 @@ Scripts to Setup the Switch Tplink SFP T1600G-28TS-SG2424.
 1. Add the switch's ip in the hosts file so we can connect using its name and not its ip.
 ```bash
     sudo nano /etc/hosts
-    192.168.0.3 switch.homelab
+    192.168.0.3 switch.lan.homelab
 ```
 
 #### Run:
 1. Run the application on the terminal.
 ```bash
     ./Setup.sh
-    or 
+    or
     ./Setup.sh <option number>
 ```
