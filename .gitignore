@@ -5,7 +5,7 @@
 .LSOverride
 
 # VSCode
-.vscode/*
+.vscode/
 
 ### HTTPS Certificates ###
 certificate/*.crt
